@@ -14,7 +14,7 @@
 
 <script>
 import { computed, ref } from "vue";
-import dtIcon from "@/components/dtIcon";
+import dtIcon from "../components/dtIcon.vue";
 
 export default {
   name: "dtNavbarToggler",

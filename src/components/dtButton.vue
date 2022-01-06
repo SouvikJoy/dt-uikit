@@ -13,7 +13,7 @@
 
 <script>
 import { computed, ref } from "vue";
-import dtRipple from "@/directives/dtRipple";
+import dtRipple from "../directives/dtRipple";
 export default {
   name: "dtButton",
   props: {

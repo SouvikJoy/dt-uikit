@@ -33,8 +33,8 @@ import {
   provide,
   onUnmounted,
 } from "vue";
-import { getUID } from "@/utils/getUID";
-import { on, off } from "@/utils/dtEventHandlers";
+import { getUID } from "../utils/getUID";
+import { on, off } from "../utils/dtEventHandlers";
 
 export default {
   name: "dtCollapse",
