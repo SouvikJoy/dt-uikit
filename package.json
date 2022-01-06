@@ -6,7 +6,7 @@
   "module": "dist/dtUiKit.mjs",
   "files": [
     "dist/*",
-    "src/scss/*"
+    "src/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
