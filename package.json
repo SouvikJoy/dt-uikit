@@ -1,16 +1,22 @@
 {
-  "name": "medikit",
+  "name": "@souvikjoy/dt-uikit",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/dtUiKit.js",
+  "module": "dist/dtUiKit.mjs",
+  "files": [
+    "dist/*",
+    "src/scss/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "rollup -c",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.2.26"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -25,9 +31,15 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
     "prettier": "^2.2.1",
+    "rollup": "^2.63.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.26"
   }
 }
