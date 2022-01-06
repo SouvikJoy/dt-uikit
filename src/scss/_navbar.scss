@@ -3,15 +3,14 @@
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($next, $grid-breakpoints);
 
-    // stylelint-disable-next-line scss/selector-no-union-class-name
     &#{$infix} {
       @include media-breakpoint-down($next) {
         .navbar-collapse {
-          display: none !important; // stylelint-disable-line declaration-no-important
+          display: none !important;
         }
 
         .navbar-collapse.show {
-          display: block !important; // stylelint-disable-line declaration-no-important
+          display: block !important;
         }
       }
     }

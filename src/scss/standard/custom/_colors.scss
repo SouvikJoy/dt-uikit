@@ -1,5 +1,3 @@
-// Colors
-
 @each $color, $value in $theme-colors {
   .bg-#{$color} {
     background-color: rgba($value, var(--dt-bg-opacity)) !important;

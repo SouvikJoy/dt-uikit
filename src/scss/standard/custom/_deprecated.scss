@@ -23,20 +23,12 @@
     pointer-events: none;
   }
 }
-
-// Additional properties for button version
-// iOS requires the button element instead of an anchor tag.
-// If you want the anchor version, it requires `href="#"`.
-// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
-
-// stylelint-disable-next-line selector-no-qualifying-type
 button.close {
   padding: 0;
   background-color: transparent;
   border: 0;
 }
 
-// Credit: Nicolas Gallagher and SUIT CSS.
 .embed-responsive {
   position: relative;
   width: 100%;
@@ -87,23 +79,6 @@ button.close {
   white-space: nowrap !important;
   border: 0 !important;
 }
-
-// 23.11.2020
-
-/*!
- * # Semantic UI 2.4.2 - Flag
- * http://github.com/semantic-org/semantic-ui/
- *
- *
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
-
-/*******************************
-             Flag
-*******************************/
-
 i.flag:not(.icon) {
   display: inline-block;
   width: 16px;

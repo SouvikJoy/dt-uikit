@@ -1,7 +1,3 @@
-//
-// Material styles for form validation
-//
-
 @mixin form-validation-state-selector($state) {
   @if ($state == 'valid' or $state == 'invalid') {
     .was-validated #{if(&, "&", "")}:#{$state},
@@ -38,7 +34,7 @@
     top: 100%;
     z-index: 5;
     display: none;
-    max-width: 100%; // Contain to parent when possible
+    max-width: 100%;
     padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
     margin-top: 0.1rem;
     font-size: 0.875rem;

@@ -1,15 +1,6 @@
-// Range
-//
-// Style range inputs the same across browsers. Vendor-specific rules for pseudo
-// elements cannot be mixed. As such, there are no shared styles for focus or
-// active states on prefixed selectors.
-
 .form-range {
   &:focus {
     box-shadow: none;
-
-    // Pseudo-elements must be split across multiple rulesets to have an effect.
-    // No box-shadow() mixin for focus accessibility.
     &::-webkit-slider-thumb {
       box-shadow: none;
     }
@@ -26,7 +17,7 @@
   }
 
   &::-webkit-slider-thumb {
-    margin-top: $form-range-webkit-slider-thumb-margin-top; // Webkit specific
+    margin-top: $form-range-webkit-slider-thumb-margin-top;
     box-shadow: none;
     appearance: none;
   }
