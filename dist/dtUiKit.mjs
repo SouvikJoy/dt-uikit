@@ -1,6 +1,6 @@
 import { ref, computed, watchEffect, provide, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot, inject, onMounted, watch, onUnmounted, Transition, withDirectives, vShow, resolveComponent, createElementVNode, toDisplayString, createVNode, createElementBlock, createCommentVNode, resolveDirective, onUpdated, Fragment, mergeProps, normalizeStyle, KeepAlive, withModifiers, withKeys, renderList, onBeforeUnmount } from 'vue';
 
-var script$C = {
+var script$D = {
   name: "dtAccordion",
   props: {
     tag: {
@@ -38,7 +38,7 @@ var script$C = {
   },
 };
 
-function render$C(_ctx, _cache, $props, $setup, $data, $options) {
+function render$D(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className),
     ref: "accordionRef"
@@ -50,8 +50,8 @@ function render$C(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$C.render = render$C;
-script$C.__file = "src/components/dtAccordion.vue";
+script$D.render = render$D;
+script$D.__file = "src/components/dtAccordion.vue";
 
 const MAX_UID = 1000000;
 
@@ -183,7 +183,7 @@ const off = function (element, event, handler, delegationFn) {
   );
 };
 
-var script$B = {
+var script$C = {
   name: "dtCollapse",
   props: {
     tag: {
@@ -425,7 +425,7 @@ var script$B = {
   },
 };
 
-function render$B(_ctx, _cache, $props, $setup, $data, $options) {
+function render$C(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(Transition, {
     onBeforeEnter: $setup.beforeEnter,
     onEnter: $setup.enter,
@@ -455,13 +455,13 @@ function render$B(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onBeforeEnter", "onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave", "duration"]))
 }
 
-script$B.render = render$B;
-script$B.__file = "src/components/dtCollapse.vue";
+script$C.render = render$C;
+script$C.__file = "src/components/dtCollapse.vue";
 
-var script$A = {
+var script$B = {
   name: "dtAccordionItem",
   components: {
-    dtCollapse: script$B,
+    dtCollapse: script$C,
   },
   props: {
     tag: {
@@ -527,7 +527,7 @@ var script$A = {
 
 const _hoisted_1$6 = ["aria-controls"];
 
-function render$A(_ctx, _cache, $props, $setup, $data, $options) {
+function render$B(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_dtCollapse = resolveComponent("dtCollapse");
 
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
@@ -564,10 +564,10 @@ function render$A(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$A.render = render$A;
-script$A.__file = "src/components/dtAccordionItem.vue";
+script$B.render = render$B;
+script$B.__file = "src/components/dtAccordionItem.vue";
 
-var script$z = {
+var script$A = {
   name: "dtAnimatedCard",
   props: {
     type: String,
@@ -592,7 +592,7 @@ const _hoisted_5$3 = {
   class: "dt-card__title"
 };
 
-function render$z(_ctx, _cache, $props, $setup, $data, $options) {
+function render$A(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", {
     class: normalizeClass(`dt-card-content type-${this.type}`)
   }, [
@@ -627,8 +627,8 @@ function render$z(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$z.render = render$z;
-script$z.__file = "src/components/dtAnimatedCard.vue";
+script$A.render = render$A;
+script$A.__file = "src/components/dtAnimatedCard.vue";
 
 const bsColors = [
   "primary",
@@ -843,7 +843,7 @@ var dtRipple = {
   },
 };
 
-var script$y = {
+var script$z = {
   name: "dtButton",
   props: {
     color: String,
@@ -908,7 +908,7 @@ var script$y = {
   },
 };
 
-function render$y(_ctx, _cache, $props, $setup, $data, $options) {
+function render$z(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_dt_ripple = resolveDirective("dt-ripple");
 
   return withDirectives((openBlock(), createBlock(resolveDynamicComponent($props.tag), {
@@ -926,10 +926,10 @@ function render$y(_ctx, _cache, $props, $setup, $data, $options) {
   ])
 }
 
-script$y.render = render$y;
-script$y.__file = "src/components/dtButton.vue";
+script$z.render = render$z;
+script$z.__file = "src/components/dtButton.vue";
 
-var script$x = {
+var script$y = {
   name: "dtBadge",
   props: {
     color: String,
@@ -960,7 +960,7 @@ var script$x = {
   },
 };
 
-function render$x(_ctx, _cache, $props, $setup, $data, $options) {
+function render$y(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -971,10 +971,10 @@ function render$x(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$x.render = render$x;
-script$x.__file = "src/components/dtBadge.vue";
+script$y.render = render$y;
+script$y.__file = "src/components/dtBadge.vue";
 
-var script$w = {
+var script$x = {
   name: "dtButtonGroup",
   props: {
     size: String,
@@ -1003,7 +1003,7 @@ var script$w = {
   },
 };
 
-function render$w(_ctx, _cache, $props, $setup, $data, $options) {
+function render$x(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className),
     role: $props.role
@@ -1015,10 +1015,10 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class", "role"]))
 }
 
-script$w.render = render$w;
-script$w.__file = "src/components/dtButtonGroup.vue";
+script$x.render = render$x;
+script$x.__file = "src/components/dtButtonGroup.vue";
 
-var script$v = {
+var script$w = {
   name: "dtCol",
   props: {
     tag: {
@@ -1086,7 +1086,7 @@ var script$v = {
   },
 };
 
-function render$v(_ctx, _cache, $props, $setup, $data, $options) {
+function render$w(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -1097,10 +1097,10 @@ function render$v(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$v.render = render$v;
-script$v.__file = "src/components/dtCol.vue";
+script$w.render = render$w;
+script$w.__file = "src/components/dtCol.vue";
 
-var script$u = {
+var script$v = {
   name: "dtContainer",
   props: {
     tag: {
@@ -1154,7 +1154,7 @@ var script$u = {
   },
 };
 
-function render$u(_ctx, _cache, $props, $setup, $data, $options) {
+function render$v(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -1165,10 +1165,10 @@ function render$u(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$u.render = render$u;
-script$u.__file = "src/components/dtContainer.vue";
+script$v.render = render$v;
+script$v.__file = "src/components/dtContainer.vue";
 
-var script$t = {
+var script$u = {
   name: "dtIcon",
   props: {
     iconStyle: {
@@ -1194,7 +1194,7 @@ var script$t = {
   },
 };
 
-function render$t(_ctx, _cache, $props, $setup, $data, $options) {
+function render$u(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("i", {
     class: normalizeClass($setup.className)
   }, [
@@ -1202,8 +1202,8 @@ function render$t(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$t.render = render$t;
-script$t.__file = "src/components/dtIcon.vue";
+script$u.render = render$u;
+script$u.__file = "src/components/dtIcon.vue";
 
 var dtClickOutside = {
   stopProp(e) {
@@ -1235,7 +1235,7 @@ var dtClickOutside = {
   },
 };
 
-var script$s = {
+var script$t = {
   name: "dtInput",
   inheritAttrs: false,
   props: {
@@ -1487,7 +1487,7 @@ const _hoisted_15 = {
   class: "form-text"
 };
 
-function render$s(_ctx, _cache, $props, $setup, $data, $options) {
+function render$t(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_dt_click_outside = resolveDirective("dt-click-outside");
 
   return (openBlock(), createElementBlock(Fragment, null, [
@@ -1616,10 +1616,10 @@ function render$s(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$s.render = render$s;
-script$s.__file = "src/components/dtInput.vue";
+script$t.render = render$t;
+script$t.__file = "src/components/dtInput.vue";
 
-var script$r = {
+var script$s = {
   name: "dtFooter",
   props: {
     tag: {
@@ -1656,7 +1656,7 @@ var script$r = {
   },
 };
 
-function render$r(_ctx, _cache, $props, $setup, $data, $options) {
+function render$s(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -1667,10 +1667,10 @@ function render$r(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$r.render = render$r;
-script$r.__file = "src/components/dtFooter.vue";
+script$s.render = render$s;
+script$s.__file = "src/components/dtFooter.vue";
 
-var script$q = {
+var script$r = {
   name: "dtNavbar",
   props: {
     tag: {
@@ -1819,7 +1819,7 @@ var script$q = {
   },
 };
 
-function render$q(_ctx, _cache, $props, $setup, $data, $options) {
+function render$r(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.navClass),
     role: "navigation",
@@ -1842,10 +1842,10 @@ function render$q(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$q.render = render$q;
-script$q.__file = "src/components/dtNavbar.vue";
+script$r.render = render$r;
+script$r.__file = "src/components/dtNavbar.vue";
 
-var script$p = {
+var script$q = {
   name: "dtNavbarBrand",
   props: {
     tag: {
@@ -1865,7 +1865,7 @@ var script$p = {
   },
 };
 
-function render$p(_ctx, _cache, $props, $setup, $data, $options) {
+function render$q(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($setup.isLink), { class: "navbar-brand" }, {
     default: withCtx(() => [
       renderSlot(_ctx.$slots, "default")
@@ -1874,12 +1874,12 @@ function render$p(_ctx, _cache, $props, $setup, $data, $options) {
   }))
 }
 
-script$p.render = render$p;
-script$p.__file = "src/components/dtNavbarBrand.vue";
+script$q.render = render$q;
+script$q.__file = "src/components/dtNavbarBrand.vue";
 
-var script$o = {
+var script$p = {
   name: "dtNavbarNav",
-  components: { dtCollapse: script$B },
+  components: { dtCollapse: script$C },
   props: {
     tag: {
       type: String,
@@ -1933,7 +1933,7 @@ var script$o = {
   },
 };
 
-function render$o(_ctx, _cache, $props, $setup, $data, $options) {
+function render$p(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -1944,10 +1944,10 @@ function render$o(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$o.render = render$o;
-script$o.__file = "src/components/dtNavbarNav.vue";
+script$p.render = render$p;
+script$p.__file = "src/components/dtNavbarNav.vue";
 
-var script$n = {
+var script$o = {
   name: "dtNavbarItem",
   props: {
     tag: {
@@ -2009,7 +2009,7 @@ var script$n = {
 
 const _hoisted_1$3 = ["href", "target"];
 
-function render$n(_ctx, _cache, $props, $setup, $data, $options) {
+function render$o(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_router_link = resolveComponent("router-link");
 
   return (openBlock(), createBlock(resolveDynamicComponent($setup.props.tag), {
@@ -2044,13 +2044,13 @@ function render$n(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$n.render = render$n;
-script$n.__file = "src/components/dtNavbarItem.vue";
+script$o.render = render$o;
+script$o.__file = "src/components/dtNavbarItem.vue";
 
-var script$m = {
+var script$n = {
   name: "dtNavbarToggler",
   components: {
-    dtIcon: script$t,
+    dtIcon: script$u,
   },
   props: {
     tag: {
@@ -2097,7 +2097,7 @@ var script$m = {
   },
 };
 
-function render$m(_ctx, _cache, $props, $setup, $data, $options) {
+function render$n(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_dt_icon = resolveComponent("dt-icon");
 
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
@@ -2119,10 +2119,10 @@ function render$m(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class", "aria-controls", "aria-expanded", "onClick"]))
 }
 
-script$m.render = render$m;
-script$m.__file = "src/components/dtNavbarToggler.vue";
+script$n.render = render$n;
+script$n.__file = "src/components/dtNavbarToggler.vue";
 
-var script$l = {
+var script$m = {
   name: "dtRow",
   props: {
     tag: {
@@ -2180,7 +2180,7 @@ var script$l = {
   },
 };
 
-function render$l(_ctx, _cache, $props, $setup, $data, $options) {
+function render$m(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -2191,10 +2191,10 @@ function render$l(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$l.render = render$l;
-script$l.__file = "src/components/dtRow.vue";
+script$m.render = render$m;
+script$m.__file = "src/components/dtRow.vue";
 
-var script$k = {
+var script$l = {
   name: "dtTextarea",
   inheritAttrs: false,
   props: {
@@ -2423,7 +2423,7 @@ const _hoisted_13 = {
   class: "form-text"
 };
 
-function render$k(_ctx, _cache, $props, $setup, $data, $options) {
+function render$l(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
     (!$props.wrap)
       ? (openBlock(), createElementBlock("textarea", mergeProps({
@@ -2534,8 +2534,8 @@ function render$k(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$k.render = render$k;
-script$k.__file = "src/components/dtTextarea.vue";
+script$l.render = render$l;
+script$l.__file = "src/components/dtTextarea.vue";
 
 const handleBreakpoints = (windowWidth, breakpointValues) => {
   const breakpoints = {
@@ -2611,7 +2611,7 @@ const handleBreakpoints = (windowWidth, breakpointValues) => {
   return value;
 };
 
-var script$j = {
+var script$k = {
   name: "dtTabs",
   props: {
     tag: {
@@ -2716,7 +2716,7 @@ var script$j = {
   },
 };
 
-function render$j(_ctx, _cache, $props, $setup, $data, $options) {
+function render$k(_ctx, _cache, $props, $setup, $data, $options) {
   return ($setup.isVertical)
     ? (openBlock(), createBlock(resolveDynamicComponent($props.tag), mergeProps({
         key: 0,
@@ -2730,10 +2730,10 @@ function render$j(_ctx, _cache, $props, $setup, $data, $options) {
     : renderSlot(_ctx.$slots, "default", { key: 1 })
 }
 
-script$j.render = render$j;
-script$j.__file = "src/components/dtTabs.vue";
+script$k.render = render$k;
+script$k.__file = "src/components/dtTabs.vue";
 
-var script$i = {
+var script$j = {
   name: "dtTabContent",
   inheritAttrs: false,
   props: {
@@ -2767,7 +2767,7 @@ var script$i = {
   },
 };
 
-function render$i(_ctx, _cache, $props, $setup, $data, $options) {
+function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(KeepAlive, null, [
     ($setup.isVertical)
       ? (openBlock(), createElementBlock("div", {
@@ -2793,10 +2793,10 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   ], 1024 /* DYNAMIC_SLOTS */))
 }
 
-script$i.render = render$i;
-script$i.__file = "src/components/dtTabContent.vue";
+script$j.render = render$j;
+script$j.__file = "src/components/dtTabContent.vue";
 
-var script$h = {
+var script$i = {
   name: "dtTabItem",
   inheritAttrs: false,
   props: {
@@ -2868,7 +2868,7 @@ const _hoisted_1$1 = {
 };
 const _hoisted_2$1 = ["aria-controls", "id", "href"];
 
-function render$h(_ctx, _cache, $props, $setup, $data, $options) {
+function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   return ($props.href)
     ? (openBlock(), createElementBlock("li", _hoisted_1$1, [
         createElementVNode("a", mergeProps({
@@ -2901,10 +2901,10 @@ function render$h(_ctx, _cache, $props, $setup, $data, $options) {
       }, 16 /* FULL_PROPS */, ["class", "aria-controls", "id"]))
 }
 
-script$h.render = render$h;
-script$h.__file = "src/components/dtTabItem.vue";
+script$i.render = render$i;
+script$i.__file = "src/components/dtTabItem.vue";
 
-var script$g = {
+var script$h = {
   name: "dtTabNav",
   props: {
     tag: {
@@ -2953,7 +2953,7 @@ var script$g = {
   },
 };
 
-function render$g(_ctx, _cache, $props, $setup, $data, $options) {
+function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   return ($setup.isVertical)
     ? (openBlock(), createElementBlock("div", {
         key: 0,
@@ -2979,10 +2979,10 @@ function render$g(_ctx, _cache, $props, $setup, $data, $options) {
       }, 8 /* PROPS */, ["class"]))
 }
 
-script$g.render = render$g;
-script$g.__file = "src/components/dtTabNav.vue";
+script$h.render = render$h;
+script$h.__file = "src/components/dtTabNav.vue";
 
-var script$f = {
+var script$g = {
   name: "dtTabPane",
   props: {
     tag: {
@@ -3059,7 +3059,7 @@ var script$f = {
   },
 };
 
-function render$f(_ctx, _cache, $props, $setup, $data, $options) {
+function render$g(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(Transition, {
     onEnter: $setup.enter,
     onAfterEnter: $setup.afterEnter,
@@ -3087,10 +3087,10 @@ function render$f(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onEnter", "onAfterEnter", "onBeforeLeave", "onAfterLeave"]))
 }
 
-script$f.render = render$f;
-script$f.__file = "src/components/dtTabPane.vue";
+script$g.render = render$g;
+script$g.__file = "src/components/dtTabPane.vue";
 
-var script$e = {
+var script$f = {
   name: "dtCard",
   props: {
     tag: {
@@ -3135,7 +3135,7 @@ var script$e = {
   },
 };
 
-function render$e(_ctx, _cache, $props, $setup, $data, $options) {
+function render$f(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -3146,10 +3146,10 @@ function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$e.render = render$e;
-script$e.__file = "src/components/dtCard.vue";
+script$f.render = render$f;
+script$f.__file = "src/components/dtCard.vue";
 
-var script$d = {
+var script$e = {
   name: "dtCardHeader",
   props: {
     tag: {
@@ -3175,7 +3175,7 @@ var script$d = {
   },
 };
 
-function render$d(_ctx, _cache, $props, $setup, $data, $options) {
+function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
   }, {
@@ -3186,10 +3186,10 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$d.render = render$d;
-script$d.__file = "src/components/dtCardHeader.vue";
+script$e.render = render$e;
+script$e.__file = "src/components/dtCardHeader.vue";
 
-var script$c = {
+var script$d = {
   name: "dtCardBody",
   props: {
     tag: {
@@ -3219,6 +3219,46 @@ var script$c = {
   },
 };
 
+function render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
+    class: normalizeClass($setup.className)
+  }, {
+    default: withCtx(() => [
+      renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$d.render = render$d;
+script$d.__file = "src/components/dtCardBody.vue";
+
+var script$c = {
+  name: "dtCardFooter",
+  props: {
+    tag: {
+      type: String,
+      default: "div",
+    },
+    bg: String,
+    border: String,
+  },
+  setup(props) {
+    const className = computed(() => {
+      return [
+        "card-footer",
+        props.border && `border-${props.border}`,
+        props.bg && `bg-${props.bg}`,
+      ];
+    });
+
+    return {
+      className,
+      props,
+    };
+  },
+};
+
 function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
@@ -3231,7 +3271,7 @@ function render$c(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script$c.render = render$c;
-script$c.__file = "src/components/dtCardBody.vue";
+script$c.__file = "src/components/dtCardFooter.vue";
 
 var script$b = {
   name: "dtCardLink",
@@ -4432,30 +4472,30 @@ script.render = render;
 script.__file = "src/components/dtModalFooter.vue";
 
 var components = {
-  dtAccordion: script$C,
-  dtAccordionItem: script$A,
-  dtButton: script$y,
-  dtFooter: script$r,
-  dtNavbar: script$q,
-  dtNavbarBrand: script$p,
-  dtNavbarNav: script$o,
-  dtNavbarItem: script$n,
-  dtNavbarToggler: script$m,
-  dtCollapse: script$B,
-  dtIcon: script$t,
-  dtContainer: script$u,
-  dtRow: script$l,
-  dtCol: script$v,
-  dtInput: script$s,
-  dtTextarea: script$k,
-  dtTabs: script$j,
-  dtTabContent: script$i,
-  dtTabItem: script$h,
-  dtTabNav: script$g,
-  dtTabPane: script$f,
-  dtCard: script$e,
-  dtCardHeader: script$d,
-  dtCardBody: script$c,
+  dtAccordion: script$D,
+  dtAccordionItem: script$B,
+  dtButton: script$z,
+  dtFooter: script$s,
+  dtNavbar: script$r,
+  dtNavbarBrand: script$q,
+  dtNavbarNav: script$p,
+  dtNavbarItem: script$o,
+  dtNavbarToggler: script$n,
+  dtCollapse: script$C,
+  dtIcon: script$u,
+  dtContainer: script$v,
+  dtRow: script$m,
+  dtCol: script$w,
+  dtInput: script$t,
+  dtTextarea: script$l,
+  dtTabs: script$k,
+  dtTabContent: script$j,
+  dtTabItem: script$i,
+  dtTabNav: script$h,
+  dtTabPane: script$g,
+  dtCard: script$f,
+  dtCardHeader: script$e,
+  dtCardBody: script$d,
   dtCardLink: script$b,
   dtCardImg: script$a,
   dtCardText: script$9,
@@ -4468,10 +4508,11 @@ var components = {
   dtModalHeader: script$2,
   dtModalBody: script$1,
   dtModalFooter: script,
-  dtAnimatedCard: script$z,
-  dtBadge: script$x,
-  dtButtonGroup: script$w,
+  dtAnimatedCard: script$A,
+  dtBadge: script$y,
+  dtButtonGroup: script$x,
   dtRipple,
+  dtCardFooter: script$c,
 };
 
 const dtUiKit = {
