@@ -1,5 +1,7 @@
 <template>
-  <div class="mainApp">App</div>
+  <div class="mainApp">
+    <dt-button :ripple="{ color: 'danger' }">Submit</dt-button>
+  </div>
 </template>
 
 <script setup></script>
