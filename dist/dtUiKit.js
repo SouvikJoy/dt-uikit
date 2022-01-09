@@ -1290,7 +1290,7 @@ var script$t = {
     const showPlaceholder = vue.ref(false);
     const notchLeadingWidth = vue.ref(9);
     const notchMiddleWidth = vue.ref(0);
-    const uid = props.id || getUID("MDBInput-");
+    const uid = props.id || getUID("dtInput-");
 
     const wrapperClassName = vue.computed(() => {
       return [
@@ -1337,7 +1337,6 @@ var script$t = {
       return props.tooltipFeedback ? "invalid-tooltip" : "invalid-feedback";
     });
 
-    // Validation ------------------------
     const isInputValidated = vue.ref(props.isValidated);
     const isInputValid = vue.ref(props.isValid);
     const defaultValidatorInvalidFeedback = vue.ref("");
@@ -1372,11 +1371,7 @@ var script$t = {
     }
 
     function setPlaceholder() {
-      if (attrs.placeholder && !labelRef.value) {
-        showPlaceholder.value = true;
-      } else {
-        showPlaceholder.value = false;
-      }
+      showPlaceholder.value = !!(attrs.placeholder && !labelRef.value);
     }
 
     const currentLength = vue.ref(0);
@@ -2603,7 +2598,6 @@ const handleBreakpoints = (windowWidth, breakpointValues) => {
     }
   });
 
-  // return single value that matches actual window width range
   const value = Object.keys(ranges).filter((key) => {
     if (windowWidth > ranges[key].min && windowWidth < ranges[key].max) {
       return key;

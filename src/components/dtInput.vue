@@ -151,7 +151,7 @@ export default {
     const showPlaceholder = ref(false);
     const notchLeadingWidth = ref(9);
     const notchMiddleWidth = ref(0);
-    const uid = props.id || getUID("MDBInput-");
+    const uid = props.id || getUID("dtInput-");
 
     const wrapperClassName = computed(() => {
       return [
@@ -198,7 +198,6 @@ export default {
       return props.tooltipFeedback ? "invalid-tooltip" : "invalid-feedback";
     });
 
-    // Validation ------------------------
     const isInputValidated = ref(props.isValidated);
     const isInputValid = ref(props.isValid);
     const defaultValidatorInvalidFeedback = ref("");
@@ -233,11 +232,7 @@ export default {
     }
 
     function setPlaceholder() {
-      if (attrs.placeholder && !labelRef.value) {
-        showPlaceholder.value = true;
-      } else {
-        showPlaceholder.value = false;
-      }
+      showPlaceholder.value = !!(attrs.placeholder && !labelRef.value);
     }
 
     const currentLength = ref(0);

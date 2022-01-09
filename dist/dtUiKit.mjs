@@ -1288,7 +1288,7 @@ var script$t = {
     const showPlaceholder = ref(false);
     const notchLeadingWidth = ref(9);
     const notchMiddleWidth = ref(0);
-    const uid = props.id || getUID("MDBInput-");
+    const uid = props.id || getUID("dtInput-");
 
     const wrapperClassName = computed(() => {
       return [
@@ -1335,7 +1335,6 @@ var script$t = {
       return props.tooltipFeedback ? "invalid-tooltip" : "invalid-feedback";
     });
 
-    // Validation ------------------------
     const isInputValidated = ref(props.isValidated);
     const isInputValid = ref(props.isValid);
     const defaultValidatorInvalidFeedback = ref("");
@@ -1370,11 +1369,7 @@ var script$t = {
     }
 
     function setPlaceholder() {
-      if (attrs.placeholder && !labelRef.value) {
-        showPlaceholder.value = true;
-      } else {
-        showPlaceholder.value = false;
-      }
+      showPlaceholder.value = !!(attrs.placeholder && !labelRef.value);
     }
 
     const currentLength = ref(0);
@@ -2601,7 +2596,6 @@ const handleBreakpoints = (windowWidth, breakpointValues) => {
     }
   });
 
-  // return single value that matches actual window width range
   const value = Object.keys(ranges).filter((key) => {
     if (windowWidth > ranges[key].min && windowWidth < ranges[key].max) {
       return key;

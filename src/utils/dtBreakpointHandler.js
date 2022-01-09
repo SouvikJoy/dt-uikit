@@ -62,7 +62,6 @@ export const handleBreakpoints = (windowWidth, breakpointValues) => {
     }
   });
 
-  // return single value that matches actual window width range
   const value = Object.keys(ranges).filter((key) => {
     if (windowWidth > ranges[key].min && windowWidth < ranges[key].max) {
       return key;
