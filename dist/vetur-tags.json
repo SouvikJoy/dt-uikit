@@ -1,0 +1,24 @@
+{
+  "Button": {
+    "description": "Button is an extension to standard button element with icons and theming.",
+    "attributes": [
+      "label",
+      "icon",
+      "iconPos",
+      "badge",
+      "badgeClass",
+      "loading",
+      "loadingIcon"
+    ]
+  },
+  "Toast": {
+    "description": "Toast is used to display messages in an overlay.",
+    "attributes": [
+      "group",
+      "position",
+      "autoZIndex",
+      "baseZIndex",
+      "breakpoints"
+    ]
+  }
+}

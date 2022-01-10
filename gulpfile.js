@@ -8,10 +8,10 @@ const gulp = require("gulp"),
 gulp.task("build-css", function () {
   return gulp
     .src(["src/assets/main.css", "src/components/**/*.css"])
-    .pipe(concat("dtUiKit.css"))
+    .pipe(concat("DebuggerVue.css"))
     .pipe(gulp.dest("dist/css"))
     .pipe(uglifycss({ uglyComments: true }))
-    .pipe(rename("dtUiKit.min.css"))
+    .pipe(rename("DebuggerVue.min.css"))
     .pipe(gulp.dest("dist/css"));
 });
 

@@ -1,0 +1,31 @@
+{
+  "name": "debuggervue",
+  "version": "1.1.1",
+  "homepage": "https://debugger.tech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SouvikJoy/studious-octo-tribble.git"
+  },
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/SouvikJoy/studious-octo-tribble.git"
+  },
+  "keywords": [
+    "debugger",
+    "vue",
+    "ui framework",
+    "component framework",
+    "ui library",
+    "component library",
+    "material",
+    "bootstrap"
+  ],
+  "web-types": "./web-types.json",
+  "vetur": {
+    "tags": "./vetur-tags.json",
+    "attributes": "./vetur-attributes.json"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}

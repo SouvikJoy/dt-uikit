@@ -1,0 +1,9 @@
+{
+  "main": "./collapse.cjs.js",
+  "module": "./collapse.esm.js",
+  "unpkg": "./collapse.min.js",
+  "types": "./Collapse.d.ts",
+  "browser": {
+    "./sfc": "./Collapse.vue"
+  }
+}

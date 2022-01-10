@@ -1,0 +1,224 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
+  "framework": "vue",
+  "name": "DebuggerVue",
+  "version": "0.1.0",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "description-markup": "markdown",
+      "tags": [
+        {
+          "name": "Button",
+          "source": {
+            "module": "DebuggerVue",
+            "symbol": "Button"
+          },
+          "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+          "description": "Button is an extension to standard button element with icons and theming.",
+          "attributes": [
+            {
+              "name": "label",
+              "default": "null",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+              "description": "Text of the button.",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "null",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+              "description": "Name of the icon.",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "iconPos",
+              "default": "left",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+              "description": "Position of the icon, valid values are \"left\", \"right\", \"bottom\" and \"top\".",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "badge",
+              "default": "null",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+              "description": "Value of the badge.",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "badgeClass",
+              "default": "null",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+              "description": "Style class of the badge.",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "loading",
+              "default": "false",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+              "description": "Whether the button is in loading state.",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "loadingIcon",
+              "default": "pi pi-spinner pi-spin",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitbutton",
+              "description": "Icon to display in loading state.",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Card",
+          "source": {
+            "module": "DebuggerVue",
+            "symbol": "Card"
+          },
+          "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitcard",
+          "description": "Card is a flexible container component.",
+          "slots": [
+            {
+              "name": "header",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitcard",
+              "description": "Custom content for the component header."
+            },
+            {
+              "name": "title",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitcard",
+              "description": "Custom content for the component title."
+            },
+            {
+              "name": "subtitle",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitcard",
+              "description": "Custom content for the component subtitle."
+            },
+            {
+              "name": "content",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitcard",
+              "description": "Custom content for the component content."
+            },
+            {
+              "name": "footer",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitcard",
+              "description": "Custom content for the component footer."
+            }
+          ]
+        },
+        {
+          "name": "Ripple",
+          "source": {
+            "module": "DebuggerVue",
+            "symbol": "Ripple"
+          },
+          "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitripple",
+          "description": "Ripple directive adds ripple effect to the host element."
+        },
+        {
+          "name": "Toast",
+          "source": {
+            "module": "DebuggerVue",
+            "symbol": "Toast"
+          },
+          "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gittoast",
+          "description": "Toast is used to display messages in an overlay.",
+          "attributes": [
+            {
+              "name": "group",
+              "default": "null",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gittoast",
+              "description": "Unique identifier of a message group.",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "position",
+              "default": "top-right",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gittoast",
+              "description": "Position of the toast in viewport. Other valid values are \"top-left\", \"top-center\", \"bottom-left\", \"bottom-center\", \"bottom-right\" and \"center\".",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "autoZIndex",
+              "default": "true",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gittoast",
+              "description": "Whether to automatically manage layering.",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "baseZIndex",
+              "default": "0",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gittoast",
+              "description": "Base zIndex value to use in layering.",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              }
+            },
+            {
+              "name": "breakpoints",
+              "default": "null",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gittoast",
+              "description": "Object literal to define widths per screen size.",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "message",
+              "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gittoast",
+              "description": "Custom content for the toast message"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Ripple",
+          "source": {
+            "module": "DebuggerVue",
+            "symbol": "Ripple"
+          },
+          "description": "Ripple directive adds ripple effect to the host element.",
+          "doc-url": "https://github.com/SouvikJoy/studious-octo-tribble.gitripple",
+          "value": {
+            "kind": "expression",
+            "type": "function"
+          },
+          "required": false
+        }
+      ]
+    }
+  }
+}

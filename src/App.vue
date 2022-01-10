@@ -1,6 +1,6 @@
 <template>
-  <div class="mainApp">
-    <dt-button :ripple="{ color: 'danger' }">Submit</dt-button>
+  <div class="container mt-3">
+    <AccordionDemo />
   </div>
 </template>
 
@@ -43,3 +43,9 @@ main {
   margin: 60px 0;
 }
 </style>
+<script>
+import AccordionDemo from "@/views/AccordionDemo";
+export default {
+  components: { AccordionDemo },
+};
+</script>

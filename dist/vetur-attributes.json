@@ -1,0 +1,50 @@
+{
+  "button/label": {
+    "description": "Text of the button.",
+    "type": "string"
+  },
+  "button/icon": {
+    "description": "Name of the icon.",
+    "type": "string"
+  },
+  "button/iconPos": {
+    "description": "Position of the icon, valid values are \"left\", \"right\", \"bottom\" and \"top\".",
+    "type": "string"
+  },
+  "button/badge": {
+    "description": "Value of the badge.",
+    "type": "string"
+  },
+  "button/badgeClass": {
+    "description": "Style class of the badge.",
+    "type": "string"
+  },
+  "button/loading": {
+    "description": "Whether the button is in loading state.",
+    "type": "boolean"
+  },
+  "button/loadingIcon": {
+    "description": "Icon to display in loading state.",
+    "type": "string"
+  },
+  "toast/group": {
+    "description": "Unique identifier of a message group.",
+    "type": "string"
+  },
+  "toast/position": {
+    "description": "Position of the toast in viewport. Other valid values are \"top-left\", \"top-center\", \"bottom-left\", \"bottom-center\", \"bottom-right\" and \"center\".",
+    "type": "string"
+  },
+  "toast/autoZIndex": {
+    "description": "Whether to automatically manage layering.",
+    "type": "boolean"
+  },
+  "toast/baseZIndex": {
+    "description": "Base zIndex value to use in layering.",
+    "type": "number"
+  },
+  "toast/breakpoints": {
+    "description": "Object literal to define widths per screen size.",
+    "type": "object"
+  }
+}

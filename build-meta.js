@@ -11,7 +11,7 @@ readdirSync(path.resolve(__dirname, "./src/components/"), {
     ).forEach((file) => {
       if (
         file === "package.json" ||
-        file.endsWith("d.js") ||
+        file.endsWith("d.ts") ||
         file.endsWith("vue")
       ) {
         copySync(
