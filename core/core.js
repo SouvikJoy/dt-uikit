@@ -2429,8 +2429,14 @@ this.debuggervue.config = (function (exports, vue) {
   };
 
   const components = [
-    ...navbarComponents,
-    ...accordionComponents,
+    script$4,
+    script$3,
+    script$2,
+    script$1,
+    script,
+    script$c,
+    script$d,
+    script$b,
     script$a,
     script$9,
     script$8,
