@@ -1428,21 +1428,29 @@ this.debuggervue.config = (function (exports, vue) {
   script.render = render;
   script.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
+  const navbarComponents = {
+    DtNavbar: script$4,
+    DtNavbarBrand: script$3,
+    DtNavbarNav: script$2,
+    DtNavbarItem: script$1,
+    DtNavbarToggler: script,
+    DtCollapse: script$c,
+  };
+
+  const accordionComponents = {
+    DtAccordion: script$d,
+    DtAccordionTab: script$b,
+  };
+
   const components = [
-    script$d,
-    script$b,
+    ...navbarComponents,
+    ...accordionComponents,
     script$a,
     script$9,
     script$8,
     script$7,
     script$6,
-    script$c,
     script$5,
-    script$4,
-    script$3,
-    script$2,
-    script$1,
-    script,
   ];
 
   const FilterMatchMode = {
@@ -1603,15 +1611,6 @@ this.debuggervue.config = (function (exports, vue) {
     app.provide(DebuggerVueSymbol, DebuggerVue);
   };
 
-  const navbarComponents = {
-    DtNavbar: script$4,
-    DtNavbarBrand: script$3,
-    DtNavbarNav: script$2,
-    DtNavbarItem: script$1,
-    DtNavbarToggler: script,
-    DtCollapse: script$c,
-  };
-
   const DtNavbarPlugin = {
     install(Vue) {
       for (const prop in navbarComponents) {
@@ -1624,10 +1623,23 @@ this.debuggervue.config = (function (exports, vue) {
     },
   };
 
+  const DtAccordionPlugin = {
+    install(Vue) {
+      for (const prop in accordionComponents) {
+        // eslint-disable-next-line no-prototype-builtins
+        if (accordionComponents.hasOwnProperty(prop)) {
+          const component = accordionComponents[prop];
+          Vue.component(component.name, component);
+        }
+      }
+    },
+  };
+
   const DebuggerVue = { install };
 
   exports.DebuggerVue = DebuggerVue;
   exports.DtAccordion = script$d;
+  exports.DtAccordionPlugin = DtAccordionPlugin;
   exports.DtAccordionTab = script$b;
   exports.DtAnimatedCard = script$a;
   exports.DtButton = script$9;
