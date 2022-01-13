@@ -2414,6 +2414,16 @@ this.debuggervue.config = (function (exports, vue) {
   script.render = render;
   script.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
+  var DtNavbarPlugin = {
+    DtNavbar: script$4,
+    DtNavbarBrand: script$3,
+    DtNavbarNav: script$2,
+    DtNavbarItem: script$1,
+    DtNavbarToggler: script,
+  };
+
+  const plugins = [DtNavbarPlugin];
+
   const components = [
     script$d,
     script$b,
@@ -2589,6 +2599,14 @@ this.debuggervue.config = (function (exports, vue) {
     app.provide(DebuggerVueSymbol, DebuggerVue);
   };
 
+  const pluginFactory = (app) => {
+    for (const plugin in plugins) {
+      if (plugin && plugins[plugin]) {
+        app.use(plugins[plugin]);
+      }
+    }
+  };
+
   var DebuggerVue = { install };
 
   exports.DtAccordion = script$d;
@@ -2607,6 +2625,7 @@ this.debuggervue.config = (function (exports, vue) {
   exports.DtNavbarToggler = script;
   exports["default"] = DebuggerVue;
   exports.install = install;
+  exports.pluginFactory = pluginFactory;
   exports.useDebuggerVue = useDebuggerVue;
 
   Object.defineProperty(exports, '__esModule', { value: true });
