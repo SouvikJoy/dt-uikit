@@ -1,0 +1,9 @@
+{
+  "main": "./dtnavbaritem.cjs.js",
+  "module": "./dtnavbaritem.esm.js",
+  "unpkg": "./dtnavbaritem.min.js",
+  "types": "./DtNavbarItem.d.ts",
+  "browser": {
+    "./sfc": "./DtNavbarItem.vue"
+  }
+}

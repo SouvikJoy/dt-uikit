@@ -1,0 +1,9 @@
+{
+  "main": "./dticon.cjs.js",
+  "module": "./dticon.esm.js",
+  "unpkg": "./dticon.min.js",
+  "types": "./DtIcon.d.ts",
+  "browser": {
+    "./sfc": "./DtIcon.vue"
+  }
+}

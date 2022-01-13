@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var vue = require('vue');
 
-var script$7 = {
+var script$d = {
   name: "DtAccordion",
   props: {
     tag: {
@@ -42,7 +42,7 @@ var script$7 = {
   },
 };
 
-function render$7(_ctx, _cache, $props, $setup, $data, $options) {
+function render$d(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className),
     ref: "accordionRef"
@@ -54,8 +54,8 @@ function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$7.render = render$7;
-script$7.__file = "src/components/dtaccordion/DtAccordion.vue";
+script$d.render = render$d;
+script$d.__file = "src/components/dtaccordion/DtAccordion.vue";
 
 const MAX_UID = 1000000;
 
@@ -187,7 +187,7 @@ const off = function (element, event, handler, delegationFn) {
   );
 };
 
-var script$6 = {
+var script$c = {
   name: "DtCollapse",
   props: {
     tag: {
@@ -429,7 +429,7 @@ var script$6 = {
   },
 };
 
-function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.Transition, {
     onBeforeEnter: $setup.beforeEnter,
     onEnter: $setup.enter,
@@ -459,13 +459,13 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onBeforeEnter", "onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave", "duration"]))
 }
 
-script$6.render = render$6;
-script$6.__file = "src/components/dtcollapse/DtCollapse.vue";
+script$c.render = render$c;
+script$c.__file = "src/components/dtcollapse/DtCollapse.vue";
 
-var script$5 = {
+var script$b = {
   name: "DtAccordionTab",
   components: {
-    DtCollapse: script$6,
+    DtCollapse: script$c,
   },
   props: {
     tag: {
@@ -529,9 +529,9 @@ var script$5 = {
   },
 };
 
-const _hoisted_1$2 = ["aria-controls"];
+const _hoisted_1$3 = ["aria-controls"];
 
-function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_DtCollapse = vue.resolveComponent("DtCollapse");
 
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
@@ -547,7 +547,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
           class: vue.normalizeClass($setup.buttonClassName),
           "aria-expanded": "true",
           "aria-controls": $props.collapseId
-        }, vue.toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$2)
+        }, vue.toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$3)
       ], 2 /* CLASS */),
       vue.createVNode(_component_DtCollapse, {
         id: $props.collapseId,
@@ -568,17 +568,17 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$5.render = render$5;
-script$5.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
+script$b.render = render$b;
+script$b.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
 
-var script$4 = {
+var script$a = {
   name: "DtAnimatedCard",
   props: {
     type: String,
   },
 };
 
-const _hoisted_1$1 = { class: "dt-card" };
+const _hoisted_1$2 = { class: "dt-card" };
 const _hoisted_2$1 = {
   key: 0,
   class: "dt-card__img"
@@ -596,11 +596,11 @@ const _hoisted_5$1 = {
   class: "dt-card__title"
 };
 
-function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+function render$a(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass(`dt-card-content type-${this.type}`)
   }, [
-    vue.createElementVNode("div", _hoisted_1$1, [
+    vue.createElementVNode("div", _hoisted_1$2, [
       (_ctx.$slots.img)
         ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$1, [
             vue.renderSlot(_ctx.$slots, "img"),
@@ -631,10 +631,10 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$4.render = render$4;
-script$4.__file = "src/components/dtanimatedcard/DtAnimatedCard.vue";
+script$a.render = render$a;
+script$a.__file = "src/components/dtanimatedcard/DtAnimatedCard.vue";
 
-var script$3 = {
+var script$9 = {
   name: "DtButton",
   props: {
     tag: {
@@ -717,7 +717,7 @@ var script$3 = {
   },
 };
 
-function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     type: $props.type,
     role: $props.role,
@@ -731,14 +731,14 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["type", "role", "class", "onClick"]))
 }
 
-script$3.render = render$3;
-script$3.__file = "src/components/dtbutton/DtButton.vue";
+script$9.render = render$9;
+script$9.__file = "src/components/dtbutton/DtButton.vue";
 
-var script$2 = {
+var script$8 = {
   name: "DtCard",
 };
 
-const _hoisted_1 = { class: "dt-simple-card dt-component" };
+const _hoisted_1$1 = { class: "dt-simple-card dt-component" };
 const _hoisted_2 = {
   key: 0,
   class: "dt-simple-card-header"
@@ -758,8 +758,8 @@ const _hoisted_7 = {
   class: "dt-simple-card-footer"
 };
 
-function render$2(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [
+function render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1, [
     (_ctx.$slots.header)
       ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2, [
           vue.renderSlot(_ctx.$slots, "header")
@@ -788,10 +788,10 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$2.render = render$2;
-script$2.__file = "src/components/dtcard/DtCard.vue";
+script$8.render = render$8;
+script$8.__file = "src/components/dtcard/DtCard.vue";
 
-var script$1 = {
+var script$7 = {
   name: "dtContainer",
   props: {
     tag: {
@@ -845,7 +845,7 @@ var script$1 = {
   },
 };
 
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className)
   }, {
@@ -856,10 +856,10 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$1.render = render$1;
-script$1.__file = "src/components/dtcontainer/DtContainer.vue";
+script$7.render = render$7;
+script$7.__file = "src/components/dtcontainer/DtContainer.vue";
 
-var script = {
+var script$6 = {
   name: "dtColumn",
   props: {
     tag: {
@@ -927,7 +927,7 @@ var script = {
   },
 };
 
-function render(_ctx, _cache, $props, $setup, $data, $options) {
+function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className)
   }, {
@@ -938,18 +938,513 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
+script$6.render = render$6;
+script$6.__file = "src/components/dtcolumn/DtColumn.vue";
+
+var script$5 = {
+  name: "DtIcon",
+  props: {
+    iconStyle: {
+      type: String,
+      default: "fas",
+    },
+    icon: String,
+    flag: String,
+    size: String,
+  },
+  setup(props) {
+    const className = vue.computed(() => {
+      return [
+        !props.flag && props.iconStyle,
+        props.flag ? `flag flag-${props.flag}` : `fa-${props.icon}`,
+        props.size && `fa-${props.size}`,
+      ];
+    });
+
+    return {
+      className,
+    };
+  },
+};
+
+function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("i", {
+    class: vue.normalizeClass($setup.className)
+  }, [
+    vue.renderSlot(_ctx.$slots, "default")
+  ], 2 /* CLASS */))
+}
+
+script$5.render = render$5;
+script$5.__file = "src/components/dticon/DtIcon.vue";
+
+var script$4 = {
+  name: "DtNavbar",
+  props: {
+    tag: {
+      type: String,
+      default: "nav",
+    },
+    bg: {
+      type: String,
+    },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
+    light: {
+      type: Boolean,
+      default: false,
+    },
+    double: {
+      type: Boolean,
+      default: false,
+    },
+    expand: {
+      type: String,
+    },
+    position: {
+      type: String,
+    },
+    transparent: {
+      type: Boolean,
+      default: false,
+    },
+    scrolling: {
+      type: Boolean,
+      default: false,
+    },
+    scrollingOffset: {
+      type: Number,
+      default: 100,
+    },
+    center: {
+      type: Boolean,
+      default: false,
+    },
+    container: {
+      type: [Boolean, String],
+      default: false,
+    },
+    classContainer: {
+      type: String,
+    },
+    classNavbar: String,
+  },
+  setup(props) {
+    const navClass = vue.computed(() => {
+      return [
+        "navbar",
+        props.dark && "navbar-dark",
+        props.light && "navbar-light",
+        props.bg && !props.transparent ? `bg-${props.bg}` : "",
+        props.expand
+          ? props.expand === "small" || props.expand === "sm"
+            ? "navbar-expand-sm"
+            : props.expand === "medium" || props.expand === "md"
+            ? "navbar-expand-md"
+            : props.expand === "large" || props.expand === "lg"
+            ? "navbar-expand-lg"
+            : "navbar-expand-xl"
+          : "",
+        props.position === "top"
+          ? "fixed-top"
+          : props.position === "bottom"
+          ? "fixed-bottom"
+          : props.position === "sticky"
+          ? "sticky-top"
+          : "",
+        props.scrolling && scrollingClass.value,
+        props.double && "double-nav",
+        props.center && "justify-content-center",
+        props.classNavbar,
+      ];
+    });
+
+    const containerClass = vue.computed(() => {
+      if (!props.container) {
+        return false;
+      }
+      return [
+        props.container !== true
+          ? `container-${props.container}`
+          : "container-fluid",
+        props.classContainer && props.classContainer,
+      ];
+    });
+
+    const scrollingClass = vue.ref("navbar-scroll");
+
+    const handleScroll = () => {
+      if (window.pageYOffset > props.scrollingOffset) {
+        scrollingClass.value = "navbar-scroll navbar-scrolled";
+      } else {
+        scrollingClass.value = "navbar-scroll";
+      }
+    };
+
+    const navbar = vue.ref(null);
+    const navbarFlexWrapValue = vue.ref("nowrap");
+    vue.provide("navbarFlexWrapValue", navbarFlexWrapValue);
+
+    const handleResize = () => {
+      if (!navbar.value) return;
+
+      const wrap = getComputedStyle(navbar.value).flexWrap;
+
+      if (wrap === "nowrap") {
+        navbarFlexWrapValue.value = "nowrap";
+      } else if (wrap === "wrap") {
+        navbarFlexWrapValue.value = "wrap";
+      }
+    };
+
+    vue.onMounted(() => {
+      if (
+        getComputedStyle(navbar.value) &&
+        getComputedStyle(navbar.value).flexWrap === "wrap"
+      ) {
+        navbarFlexWrapValue.value = "wrap";
+      } else {
+        navbarFlexWrapValue.value = "nowrap";
+      }
+      window.addEventListener("resize", () => handleResize());
+
+      if (props.scrolling) {
+        window.addEventListener("scroll", handleScroll);
+      }
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    });
+
+    return {
+      navbar,
+      navClass,
+      containerClass,
+      props,
+    };
+  },
+};
+
+function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.navClass),
+    role: "navigation",
+    ref: "navbar"
+  }, {
+    default: vue.withCtx(() => [
+      ($props.container)
+        ? (vue.openBlock(), vue.createElementBlock("div", {
+            key: 0,
+            class: vue.normalizeClass($setup.containerClass)
+          }, [
+            vue.renderSlot(_ctx.$slots, "default")
+          ], 2 /* CLASS */))
+        : vue.createCommentVNode("v-if", true),
+      (!$props.container)
+        ? vue.renderSlot(_ctx.$slots, "default", { key: 1 })
+        : vue.createCommentVNode("v-if", true)
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$4.render = render$4;
+script$4.__file = "src/components/dtnavbar/DtNavbar.vue";
+
+var script$3 = {
+  name: "DtNavbarBrand",
+  props: {
+    tag: {
+      type: String,
+      default: "div",
+    },
+  },
+  setup(props, { attrs }) {
+    const isLink = vue.computed(() => {
+      return attrs.href ? "a" : props.tag;
+    });
+
+    return {
+      isLink,
+      props,
+    };
+  },
+};
+
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($setup.isLink), { class: "navbar-brand" }, {
+    default: vue.withCtx(() => [
+      vue.renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }))
+}
+
+script$3.render = render$3;
+script$3.__file = "src/components/dtnavbarbrand/DtNavbarBrand.vue";
+
+var script$2 = {
+  name: "DtNavbarNav",
+  components: { dtCollapse: script$c },
+  props: {
+    tag: {
+      type: String,
+      default: "ul",
+    },
+    right: {
+      type: Boolean,
+      default: false,
+    },
+    center: {
+      type: Boolean,
+      default: false,
+    },
+    vertical: {
+      type: Boolean,
+      default: false,
+    },
+    justifyAround: {
+      type: Boolean,
+      default: false,
+    },
+    class: {
+      type: String,
+    },
+    nav: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  setup(props) {
+    const className = vue.computed(() => {
+      return [
+        props.nav ? "nav" : "navbar-nav",
+        props.right
+          ? "ms-auto"
+          : props.center
+          ? "justify-content-center w-100"
+          : props.vertical
+          ? "flex-column"
+          : props.justifyAround
+          ? "justify-content-around w-100"
+          : "me-auto",
+        props.class && `${props.class}`,
+      ];
+    });
+
+    return {
+      props,
+      className,
+    };
+  },
+};
+
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.className)
+  }, {
+    default: vue.withCtx(() => [
+      vue.renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$2.render = render$2;
+script$2.__file = "src/components/dtnavbarnav/DtNavbarNav.vue";
+
+var script$1 = {
+  name: "DtNavbarItem",
+  props: {
+    tag: {
+      type: String,
+      default: "li",
+    },
+    active: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Boolean,
+    },
+    exact: {
+      type: Boolean,
+      default: false,
+    },
+    newTab: {
+      type: Boolean,
+      default: false,
+    },
+    to: [Object, String],
+    href: {
+      type: String,
+    },
+    linkClass: {
+      type: String,
+    },
+  },
+  setup(props) {
+    const className = vue.computed(() => {
+      return ["nav-item", !props.to && !props.href && props.active && "active"];
+    });
+
+    const linkClassName = vue.computed(() => {
+      return [
+        "nav-link",
+        props.disabled && "disabled",
+        props.active && "active",
+        props.linkClass,
+      ];
+    });
+    const tab = vue.computed(() => {
+      if (props.newTab) {
+        return "_blank";
+      }
+
+      return false;
+    });
+
+    return {
+      props,
+      className,
+      linkClassName,
+      tab,
+    };
+  },
+};
+
+const _hoisted_1 = ["href", "target"];
+
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_router_link = vue.resolveComponent("router-link");
+
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($setup.props.tag), {
+    class: vue.normalizeClass($setup.className)
+  }, {
+    default: vue.withCtx(() => [
+      ($props.to)
+        ? (vue.openBlock(), vue.createBlock(_component_router_link, {
+            key: 0,
+            class: vue.normalizeClass($setup.linkClassName),
+            exact: $props.exact,
+            to: $props.to,
+            target: $setup.tab
+          }, {
+            default: vue.withCtx(() => [
+              vue.renderSlot(_ctx.$slots, "default")
+            ]),
+            _: 3 /* FORWARDED */
+          }, 8 /* PROPS */, ["class", "exact", "to", "target"]))
+        : ($props.href)
+          ? (vue.openBlock(), vue.createElementBlock("a", {
+              key: 1,
+              href: $props.href,
+              class: vue.normalizeClass($setup.linkClassName),
+              target: $setup.tab
+            }, [
+              vue.renderSlot(_ctx.$slots, "default")
+            ], 10 /* CLASS, PROPS */, _hoisted_1))
+          : vue.renderSlot(_ctx.$slots, "default", { key: 2 })
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$1.render = render$1;
+script$1.__file = "src/components/dtnavbaritem/DtNavbarItem.vue";
+
+var script = {
+  name: "DtNavbarToggler",
+  components: {
+    dtIcon: script$5,
+  },
+  props: {
+    tag: {
+      type: String,
+      default: "button",
+    },
+    target: {
+      type: String,
+      default: "#navbarSupportedContent",
+    },
+    togglerClass: {
+      type: String,
+    },
+    togglerIcon: {
+      type: String,
+      default: "bars",
+    },
+    togglerSize: {
+      type: String,
+      default: "1x",
+    },
+    iconStyle: {
+      type: String,
+      default: "fas",
+    },
+  },
+  setup(props) {
+    const navTogglerClass = vue.computed(() => {
+      return ["navbar-toggler", props.togglerClass];
+    });
+
+    const isExpanded = vue.ref(false);
+
+    const handleClick = () => {
+      isExpanded.value = !isExpanded.value;
+    };
+
+    return {
+      navTogglerClass,
+      handleClick,
+      isExpanded,
+      props,
+    };
+  },
+};
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_dt_icon = vue.resolveComponent("dt-icon");
+
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.navTogglerClass),
+    type: "button",
+    "aria-controls": $props.target,
+    "aria-expanded": $setup.isExpanded,
+    "aria-label": "Toggle navigation",
+    onClick: $setup.handleClick
+  }, {
+    default: vue.withCtx(() => [
+      vue.createVNode(_component_dt_icon, {
+        icon: $props.togglerIcon,
+        size: $props.togglerSize,
+        iconStyle: $props.iconStyle
+      }, null, 8 /* PROPS */, ["icon", "size", "iconStyle"])
+    ]),
+    _: 1 /* STABLE */
+  }, 8 /* PROPS */, ["class", "aria-controls", "aria-expanded", "onClick"]))
+}
+
 script.render = render;
-script.__file = "src/components/dtcolumn/DtColumn.vue";
+script.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
 const components = [
+  script$d,
+  script$b,
+  script$a,
+  script$9,
+  script$8,
   script$7,
+  script$6,
+  script$c,
   script$5,
   script$4,
   script$3,
   script$2,
   script$1,
   script,
-  script$6,
 ];
 
 const FilterMatchMode = {
@@ -1112,14 +1607,20 @@ const install = (app, options) => {
 
 var DebuggerVue = { install };
 
-exports.DtAccordion = script$7;
-exports.DtAccordionTab = script$5;
-exports.DtAnimatedCard = script$4;
-exports.DtButton = script$3;
-exports.DtCard = script$2;
-exports.DtCollapse = script$6;
-exports.DtColumn = script;
-exports.DtContainer = script$1;
+exports.DtAccordion = script$d;
+exports.DtAccordionTab = script$b;
+exports.DtAnimatedCard = script$a;
+exports.DtButton = script$9;
+exports.DtCard = script$8;
+exports.DtCollapse = script$c;
+exports.DtColumn = script$6;
+exports.DtContainer = script$7;
+exports.DtIcon = script$5;
+exports.DtNavbar = script$4;
+exports.DtNavbarBrand = script$3;
+exports.DtNavbarItem = script$1;
+exports.DtNavbarNav = script$2;
+exports.DtNavbarToggler = script;
 exports["default"] = DebuggerVue;
 exports.install = install;
 exports.useDebuggerVue = useDebuggerVue;

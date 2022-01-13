@@ -1,0 +1,9 @@
+{
+  "main": "./dtnavbarbrand.cjs.js",
+  "module": "./dtnavbarbrand.esm.js",
+  "unpkg": "./dtnavbarbrand.min.js",
+  "types": "./DtNavbarBrand.d.ts",
+  "browser": {
+    "./sfc": "./DtNavbarBrand.vue"
+  }
+}

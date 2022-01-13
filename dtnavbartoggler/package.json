@@ -1,0 +1,9 @@
+{
+  "main": "./dtnavbartoggler.cjs.js",
+  "module": "./dtnavbartoggler.esm.js",
+  "unpkg": "./dtnavbartoggler.min.js",
+  "types": "./DtNavbarToggler.d.ts",
+  "browser": {
+    "./sfc": "./DtNavbarToggler.vue"
+  }
+}
