@@ -1607,18 +1607,14 @@ const install = (app, options) => {
     app.component(component.name, component);
   });
 
+  plugins.forEach((plugin) => {
+    app.use(plugin.name, plugin);
+  });
+
   app.config.globalProperties.$debuggervue = DebuggerVue;
   app.provide(DebuggerVueSymbol, DebuggerVue);
 };
 
-const pluginFactory = (app) => {
-  for (const plugin in plugins) {
-    if (plugin && plugins[plugin]) {
-      app.use(plugins[plugin]);
-    }
-  }
-};
-
 var DebuggerVue = { install };
 
-export { script$d as DtAccordion, script$b as DtAccordionTab, script$a as DtAnimatedCard, script$9 as DtButton, script$8 as DtCard, script$c as DtCollapse, script$6 as DtColumn, script$7 as DtContainer, script$5 as DtIcon, script$4 as DtNavbar, script$3 as DtNavbarBrand, script$1 as DtNavbarItem, script$2 as DtNavbarNav, script as DtNavbarToggler, DebuggerVue as default, install, pluginFactory, useDebuggerVue };
+export { script$d as DtAccordion, script$b as DtAccordionTab, script$a as DtAnimatedCard, script$9 as DtButton, script$8 as DtCard, script$c as DtCollapse, script$6 as DtColumn, script$7 as DtContainer, script$5 as DtIcon, script$4 as DtNavbar, script$3 as DtNavbarBrand, script$1 as DtNavbarItem, script$2 as DtNavbarNav, DtNavbarPlugin, script as DtNavbarToggler, DebuggerVue as default, install, useDebuggerVue };

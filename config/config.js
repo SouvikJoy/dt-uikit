@@ -1609,16 +1609,12 @@ this.debuggervue.config = (function (exports, vue) {
       app.component(component.name, component);
     });
 
+    plugins.forEach((plugin) => {
+      app.use(plugin.name, plugin);
+    });
+
     app.config.globalProperties.$debuggervue = DebuggerVue;
     app.provide(DebuggerVueSymbol, DebuggerVue);
-  };
-
-  const pluginFactory = (app) => {
-    for (const plugin in plugins) {
-      if (plugin && plugins[plugin]) {
-        app.use(plugins[plugin]);
-      }
-    }
   };
 
   var DebuggerVue = { install };
@@ -1636,10 +1632,10 @@ this.debuggervue.config = (function (exports, vue) {
   exports.DtNavbarBrand = script$3;
   exports.DtNavbarItem = script$1;
   exports.DtNavbarNav = script$2;
+  exports.DtNavbarPlugin = DtNavbarPlugin;
   exports.DtNavbarToggler = script;
   exports["default"] = DebuggerVue;
   exports.install = install;
-  exports.pluginFactory = pluginFactory;
   exports.useDebuggerVue = useDebuggerVue;
 
   Object.defineProperty(exports, '__esModule', { value: true });
