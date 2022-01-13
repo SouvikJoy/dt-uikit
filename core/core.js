@@ -2414,7 +2414,7 @@ this.debuggervue.config = (function (exports, vue) {
   script.render = render;
   script.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
-  var DtNavbarPlugin = {
+  var DtNavbar = {
     DtNavbar: script$4,
     DtNavbarBrand: script$3,
     DtNavbarNav: script$2,
@@ -2422,7 +2422,7 @@ this.debuggervue.config = (function (exports, vue) {
     DtNavbarToggler: script,
   };
 
-  const plugins = [DtNavbarPlugin];
+  //const plugins = [DtNavbarPlugin];
 
   const components = [
     script$d,
@@ -2434,11 +2434,7 @@ this.debuggervue.config = (function (exports, vue) {
     script$6,
     script$c,
     script$5,
-    script$4,
-    script$3,
-    script$2,
-    script$1,
-    script,
+    DtNavbar,
   ];
 
   const FilterMatchMode = {
@@ -2595,10 +2591,6 @@ this.debuggervue.config = (function (exports, vue) {
       app.component(component.name, component);
     });
 
-    plugins.forEach((plugin) => {
-      app.use(plugin.name, plugin);
-    });
-
     app.config.globalProperties.$debuggervue = DebuggerVue;
     app.provide(DebuggerVueSymbol, DebuggerVue);
   };
@@ -2614,12 +2606,7 @@ this.debuggervue.config = (function (exports, vue) {
   exports.DtColumn = script$6;
   exports.DtContainer = script$7;
   exports.DtIcon = script$5;
-  exports.DtNavbar = script$4;
-  exports.DtNavbarBrand = script$3;
-  exports.DtNavbarItem = script$1;
-  exports.DtNavbarNav = script$2;
-  exports.DtNavbarPlugin = DtNavbarPlugin;
-  exports.DtNavbarToggler = script;
+  exports.DtNavbar = DtNavbar;
   exports["default"] = DebuggerVue;
   exports.install = install;
   exports.useDebuggerVue = useDebuggerVue;

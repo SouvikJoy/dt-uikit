@@ -1426,7 +1426,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
-var DtNavbarPlugin = {
+var DtNavbar = {
   DtNavbar: script$4,
   DtNavbarBrand: script$3,
   DtNavbarNav: script$2,
@@ -1434,7 +1434,7 @@ var DtNavbarPlugin = {
   DtNavbarToggler: script,
 };
 
-const plugins = [DtNavbarPlugin];
+//const plugins = [DtNavbarPlugin];
 
 const components = [
   script$d,
@@ -1446,11 +1446,7 @@ const components = [
   script$6,
   script$c,
   script$5,
-  script$4,
-  script$3,
-  script$2,
-  script$1,
-  script,
+  DtNavbar,
 ];
 
 const FilterMatchMode = {
@@ -1607,14 +1603,10 @@ const install = (app, options) => {
     app.component(component.name, component);
   });
 
-  plugins.forEach((plugin) => {
-    app.use(plugin.name, plugin);
-  });
-
   app.config.globalProperties.$debuggervue = DebuggerVue;
   app.provide(DebuggerVueSymbol, DebuggerVue);
 };
 
 var DebuggerVue = { install };
 
-export { script$d as DtAccordion, script$b as DtAccordionTab, script$a as DtAnimatedCard, script$9 as DtButton, script$8 as DtCard, script$c as DtCollapse, script$6 as DtColumn, script$7 as DtContainer, script$5 as DtIcon, script$4 as DtNavbar, script$3 as DtNavbarBrand, script$1 as DtNavbarItem, script$2 as DtNavbarNav, DtNavbarPlugin, script as DtNavbarToggler, DebuggerVue as default, install, useDebuggerVue };
+export { script$d as DtAccordion, script$b as DtAccordionTab, script$a as DtAnimatedCard, script$9 as DtButton, script$8 as DtCard, script$c as DtCollapse, script$6 as DtColumn, script$7 as DtContainer, script$5 as DtIcon, DtNavbar, DebuggerVue as default, install, useDebuggerVue };
