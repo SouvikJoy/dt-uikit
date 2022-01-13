@@ -1609,6 +1609,7 @@ this.debuggervue.config = (function (exports, vue) {
     DtNavbarNav: script$2,
     DtNavbarItem: script$1,
     DtNavbarToggler: script,
+    DtCollapse: script$c,
   };
 
   const DtNavbarPlugin = {
