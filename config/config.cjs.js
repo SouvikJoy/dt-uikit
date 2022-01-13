@@ -1430,13 +1430,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
-var DtNavbar = {
-  DtNavbar: script$4,
-  DtNavbarBrand: script$3,
-  DtNavbarNav: script$2,
-  DtNavbarItem: script$1,
-  DtNavbarToggler: script,
-};
+//import DtNavbar from "../dtnavbar/DtNavbar";
 
 //const plugins = [DtNavbarPlugin];
 
@@ -1450,7 +1444,11 @@ const components = [
   script$6,
   script$c,
   script$5,
-  DtNavbar,
+  script$4,
+  script$3,
+  script$2,
+  script$1,
+  script,
 ];
 
 const FilterMatchMode = {
@@ -1622,7 +1620,11 @@ exports.DtCollapse = script$c;
 exports.DtColumn = script$6;
 exports.DtContainer = script$7;
 exports.DtIcon = script$5;
-exports.DtNavbar = DtNavbar;
+exports.DtNavbar = script$4;
+exports.DtNavbarBrand = script$3;
+exports.DtNavbarItem = script$1;
+exports.DtNavbarNav = script$2;
+exports.DtNavbarToggler = script;
 exports["default"] = DebuggerVue;
 exports.install = install;
 exports.useDebuggerVue = useDebuggerVue;
