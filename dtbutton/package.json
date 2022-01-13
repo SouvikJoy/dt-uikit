@@ -1,0 +1,9 @@
+{
+  "main": "./dtbutton.cjs.js",
+  "module": "./dtbutton.esm.js",
+  "unpkg": "./dtbutton.min.js",
+  "types": "./DtButton.d.ts",
+  "browser": {
+    "./sfc": "./DtButton.vue"
+  }
+}

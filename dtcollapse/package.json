@@ -1,0 +1,9 @@
+{
+  "main": "./dtcollapse.cjs.js",
+  "module": "./dtcollapse.esm.js",
+  "unpkg": "./dtcollapse.min.js",
+  "types": "./DtCollapse.d.ts",
+  "browser": {
+    "./sfc": "./DtCollapse.vue"
+  }
+}

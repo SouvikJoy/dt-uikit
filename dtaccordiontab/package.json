@@ -1,0 +1,9 @@
+{
+  "main": "./dtaccordiontab.cjs.js",
+  "module": "./dtaccordiontab.esm.js",
+  "unpkg": "./dtaccordiontab.min.js",
+  "types": "./DtAccordionTab.d.ts",
+  "browser": {
+    "./sfc": "./DtAccordionTab.vue"
+  }
+}

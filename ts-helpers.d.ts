@@ -19,9 +19,6 @@ export type GlobalComponentConstructor<T> = {
     new (): T;
 }
 
-/**
- * Custom types
- */
 export declare type Booleanish = boolean | 'true' | 'false';
 
 export declare type Numberish = number | string;

@@ -1,0 +1,9 @@
+{
+  "main": "./dtcard.cjs.js",
+  "module": "./dtcard.esm.js",
+  "unpkg": "./dtcard.min.js",
+  "types": "./DtCard.d.ts",
+  "browser": {
+    "./sfc": "./DtCard.vue"
+  }
+}
