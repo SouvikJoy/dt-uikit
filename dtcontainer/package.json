@@ -1,0 +1,9 @@
+{
+  "main": "./dtcontainer.cjs.js",
+  "module": "./dtcontainer.esm.js",
+  "unpkg": "./dtcontainer.min.js",
+  "types": "./DtContainer.d.ts",
+  "browser": {
+    "./sfc": "./DtContainer.vue"
+  }
+}

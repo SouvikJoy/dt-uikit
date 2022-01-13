@@ -1,0 +1,9 @@
+{
+  "main": "./dtrow.cjs.js",
+  "module": "./dtrow.esm.js",
+  "unpkg": "./dtrow.min.js",
+  "types": "./DtRow.d.ts",
+  "browser": {
+    "./sfc": "./DtRow.vue"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "main": "./dtcolumn.cjs.js",
+  "module": "./dtcolumn.esm.js",
+  "unpkg": "./dtcolumn.min.js",
+  "types": "./DtColumn.d.ts",
+  "browser": {
+    "./sfc": "./DtColumn.vue"
+  }
+}
