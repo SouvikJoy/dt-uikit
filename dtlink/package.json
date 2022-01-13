@@ -1,0 +1,9 @@
+{
+  "main": "./dtlink.cjs.js",
+  "module": "./dtlink.esm.js",
+  "unpkg": "./dtlink.min.js",
+  "types": "./DtLink.d.ts",
+  "browser": {
+    "./sfc": "./DtLink.vue"
+  }
+}
