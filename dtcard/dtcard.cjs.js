@@ -6,24 +6,24 @@ var script = {
   name: "DtCard",
 };
 
-const _hoisted_1 = { class: "dt-card dt-component" };
+const _hoisted_1 = { class: "dt-simple-card dt-component" };
 const _hoisted_2 = {
   key: 0,
-  class: "dt-card-header"
+  class: "dt-simple-card-header"
 };
-const _hoisted_3 = { class: "dt-card-body" };
+const _hoisted_3 = { class: "dt-simple-card-body" };
 const _hoisted_4 = {
   key: 0,
-  class: "dt-card-title"
+  class: "dt-simple-card-title"
 };
 const _hoisted_5 = {
   key: 1,
-  class: "dt-card-subtitle"
+  class: "dt-simple-card-subtitle"
 };
-const _hoisted_6 = { class: "dt-card-content" };
+const _hoisted_6 = { class: "dt-simple-card-content" };
 const _hoisted_7 = {
   key: 2,
-  class: "dt-card-footer"
+  class: "dt-simple-card-footer"
 };
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {

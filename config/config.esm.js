@@ -1,6 +1,6 @@
-import { ref, computed, watchEffect, provide, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot, inject, onMounted, watch, onUnmounted, Transition, withDirectives, vShow, resolveComponent, createElementVNode, toDisplayString, createVNode, reactive } from 'vue';
+import { ref, computed, watchEffect, provide, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot, inject, onMounted, watch, onUnmounted, Transition, withDirectives, vShow, resolveComponent, createElementVNode, toDisplayString, createVNode, createElementBlock, createCommentVNode, reactive } from 'vue';
 
-var script$4 = {
+var script$7 = {
   name: "DtAccordion",
   props: {
     tag: {
@@ -38,7 +38,7 @@ var script$4 = {
   },
 };
 
-function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className),
     ref: "accordionRef"
@@ -50,8 +50,8 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$4.render = render$4;
-script$4.__file = "src/components/dtaccordion/DtAccordion.vue";
+script$7.render = render$7;
+script$7.__file = "src/components/dtaccordion/DtAccordion.vue";
 
 const MAX_UID = 1000000;
 
@@ -183,7 +183,7 @@ const off = function (element, event, handler, delegationFn) {
   );
 };
 
-var script$3 = {
+var script$6 = {
   name: "DtCollapse",
   props: {
     tag: {
@@ -425,7 +425,7 @@ var script$3 = {
   },
 };
 
-function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(Transition, {
     onBeforeEnter: $setup.beforeEnter,
     onEnter: $setup.enter,
@@ -455,13 +455,13 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onBeforeEnter", "onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave", "duration"]))
 }
 
-script$3.render = render$3;
-script$3.__file = "src/components/dtcollapse/DtCollapse.vue";
+script$6.render = render$6;
+script$6.__file = "src/components/dtcollapse/DtCollapse.vue";
 
-var script$2 = {
+var script$5 = {
   name: "DtAccordionTab",
   components: {
-    DtCollapse: script$3,
+    DtCollapse: script$6,
   },
   props: {
     tag: {
@@ -525,9 +525,9 @@ var script$2 = {
   },
 };
 
-const _hoisted_1 = ["aria-controls"];
+const _hoisted_1$2 = ["aria-controls"];
 
-function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+function render$5(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_DtCollapse = resolveComponent("DtCollapse");
 
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
@@ -543,7 +543,7 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
           class: normalizeClass($setup.buttonClassName),
           "aria-expanded": "true",
           "aria-controls": $props.collapseId
-        }, toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1)
+        }, toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$2)
       ], 2 /* CLASS */),
       createVNode(_component_DtCollapse, {
         id: $props.collapseId,
@@ -564,10 +564,73 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$2.render = render$2;
-script$2.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
+script$5.render = render$5;
+script$5.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
 
-var script$1 = {
+var script$4 = {
+  name: "DtAnimatedCard",
+  props: {
+    type: String,
+  },
+};
+
+const _hoisted_1$1 = { class: "dt-card" };
+const _hoisted_2$1 = {
+  key: 0,
+  class: "dt-card__img"
+};
+const _hoisted_3$1 = {
+  key: 0,
+  class: "dt-card__interactions"
+};
+const _hoisted_4$1 = {
+  key: 1,
+  class: "dt-card__text"
+};
+const _hoisted_5$1 = {
+  key: 0,
+  class: "dt-card__title"
+};
+
+function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  return (openBlock(), createElementBlock("div", {
+    class: normalizeClass(`dt-card-content type-${this.type}`)
+  }, [
+    createElementVNode("div", _hoisted_1$1, [
+      (_ctx.$slots.img)
+        ? (openBlock(), createElementBlock("div", _hoisted_2$1, [
+            renderSlot(_ctx.$slots, "img"),
+            (_ctx.$slots.interactions)
+              ? (openBlock(), createElementBlock("div", _hoisted_3$1, [
+                  createElementVNode("span", null, [
+                    renderSlot(_ctx.$slots, "interactions")
+                  ])
+                ]))
+              : createCommentVNode("v-if", true)
+          ]))
+        : createCommentVNode("v-if", true),
+      (_ctx.$slots.text)
+        ? (openBlock(), createElementBlock("div", _hoisted_4$1, [
+            (_ctx.$slots.title)
+              ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
+                  createElementVNode("h3", null, [
+                    renderSlot(_ctx.$slots, "title")
+                  ])
+                ]))
+              : createCommentVNode("v-if", true),
+            createElementVNode("p", null, [
+              renderSlot(_ctx.$slots, "text")
+            ])
+          ]))
+        : createCommentVNode("v-if", true)
+    ])
+  ], 2 /* CLASS */))
+}
+
+script$4.render = render$4;
+script$4.__file = "src/components/dtanimatedcard/DtAnimatedCard.vue";
+
+var script$3 = {
   name: "DtButton",
   props: {
     tag: {
@@ -650,7 +713,7 @@ var script$1 = {
   },
 };
 
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     type: $props.type,
     role: $props.role,
@@ -664,10 +727,67 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["type", "role", "class", "onClick"]))
 }
 
-script$1.render = render$1;
-script$1.__file = "src/components/dtbutton/DtButton.vue";
+script$3.render = render$3;
+script$3.__file = "src/components/dtbutton/DtButton.vue";
 
-var script = {
+var script$2 = {
+  name: "DtCard",
+};
+
+const _hoisted_1 = { class: "dt-simple-card dt-component" };
+const _hoisted_2 = {
+  key: 0,
+  class: "dt-simple-card-header"
+};
+const _hoisted_3 = { class: "dt-simple-card-body" };
+const _hoisted_4 = {
+  key: 0,
+  class: "dt-simple-card-title"
+};
+const _hoisted_5 = {
+  key: 1,
+  class: "dt-simple-card-subtitle"
+};
+const _hoisted_6 = { class: "dt-simple-card-content" };
+const _hoisted_7 = {
+  key: 2,
+  class: "dt-simple-card-footer"
+};
+
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  return (openBlock(), createElementBlock("div", _hoisted_1, [
+    (_ctx.$slots.header)
+      ? (openBlock(), createElementBlock("div", _hoisted_2, [
+          renderSlot(_ctx.$slots, "header")
+        ]))
+      : createCommentVNode("v-if", true),
+    createElementVNode("div", _hoisted_3, [
+      (_ctx.$slots.title)
+        ? (openBlock(), createElementBlock("div", _hoisted_4, [
+            renderSlot(_ctx.$slots, "title")
+          ]))
+        : createCommentVNode("v-if", true),
+      (_ctx.$slots.subtitle)
+        ? (openBlock(), createElementBlock("div", _hoisted_5, [
+            renderSlot(_ctx.$slots, "subtitle")
+          ]))
+        : createCommentVNode("v-if", true),
+      createElementVNode("div", _hoisted_6, [
+        renderSlot(_ctx.$slots, "content")
+      ]),
+      (_ctx.$slots.footer)
+        ? (openBlock(), createElementBlock("div", _hoisted_7, [
+            renderSlot(_ctx.$slots, "footer")
+          ]))
+        : createCommentVNode("v-if", true)
+    ])
+  ]))
+}
+
+script$2.render = render$2;
+script$2.__file = "src/components/dtcard/DtCard.vue";
+
+var script$1 = {
   name: "dtContainer",
   props: {
     tag: {
@@ -721,6 +841,88 @@ var script = {
   },
 };
 
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
+    class: normalizeClass($setup.className)
+  }, {
+    default: withCtx(() => [
+      renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$1.render = render$1;
+script$1.__file = "src/components/dtcontainer/DtContainer.vue";
+
+var script = {
+  name: "dtColumn",
+  props: {
+    tag: {
+      type: String,
+      default: "div",
+    },
+    col: {
+      type: String,
+    },
+    sm: {
+      type: String,
+    },
+    md: {
+      type: String,
+    },
+    lg: {
+      type: String,
+    },
+    xl: {
+      type: String,
+    },
+    offset: {
+      type: String,
+    },
+    offsetSm: {
+      type: String,
+    },
+    offsetMd: {
+      type: String,
+    },
+    offsetLg: {
+      type: String,
+    },
+    offsetXl: {
+      type: String,
+    },
+    auto: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  setup(props) {
+    const className = computed(() => {
+      return [
+        props.col ? "col-" + props.col : "",
+        props.sm ? "col-sm-" + props.sm : "",
+        props.md ? "col-md-" + props.md : "",
+        props.lg ? "col-lg-" + props.lg : "",
+        props.xl ? "col-xl-" + props.xl : "",
+        !props.col && !props.sm && !props.md && !props.lg && !props.xl
+          ? "col"
+          : "",
+        props.offset ? "offset-" + props.offset : "",
+        props.offsetSm ? "offset-sm-" + props.offsetSm : "",
+        props.offsetMd ? "offset-md-" + props.offsetMd : "",
+        props.offsetXl ? "offset-lg" + props.offsetXl : "",
+        props.auto ? "col-auto" : "",
+      ];
+    });
+
+    return {
+      className,
+      props,
+    };
+  },
+};
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className)
@@ -733,9 +935,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script.render = render;
-script.__file = "src/components/dtcontainer/DtContainer.vue";
+script.__file = "src/components/dtcolumn/DtColumn.vue";
 
-const components = [script$4, script$2, script$1, script];
+const components = [
+  script$7,
+  script$5,
+  script$4,
+  script$3,
+  script$2,
+  script$1,
+  script,
+  script$6,
+];
 
 const FilterMatchMode = {
   STARTS_WITH: "startsWith",
@@ -897,4 +1108,4 @@ const install = (app, options) => {
 
 var DebuggerVue = { install };
 
-export { script$4 as DtAccordion, script$2 as DtAccordionTab, script$1 as DtButton, script as DtContainer, DebuggerVue as default, install, useDebuggerVue };
+export { script$7 as DtAccordion, script$5 as DtAccordionTab, script$4 as DtAnimatedCard, script$3 as DtButton, script$2 as DtCard, script$6 as DtCollapse, script as DtColumn, script$1 as DtContainer, DebuggerVue as default, install, useDebuggerVue };

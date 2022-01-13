@@ -1,19 +1,19 @@
 <template>
-  <div class="dt-card dt-component">
-    <div class="dt-card-header" v-if="$slots.header">
+  <div class="dt-simple-card dt-component">
+    <div class="dt-simple-card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
-    <div class="dt-card-body">
-      <div class="dt-card-title" v-if="$slots.title">
+    <div class="dt-simple-card-body">
+      <div class="dt-simple-card-title" v-if="$slots.title">
         <slot name="title"></slot>
       </div>
-      <div class="dt-card-subtitle" v-if="$slots.subtitle">
+      <div class="dt-simple-card-subtitle" v-if="$slots.subtitle">
         <slot name="subtitle"></slot>
       </div>
-      <div class="dt-card-content">
+      <div class="dt-simple-card-content">
         <slot name="content"></slot>
       </div>
-      <div class="dt-card-footer" v-if="$slots.footer">
+      <div class="dt-simple-card-footer" v-if="$slots.footer">
         <slot name="footer"></slot>
       </div>
     </div>
