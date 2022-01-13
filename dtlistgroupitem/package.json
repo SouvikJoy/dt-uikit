@@ -1,0 +1,9 @@
+{
+  "main": "./dtlistgroupitem.cjs.js",
+  "module": "./dtlistgroupitem.esm.js",
+  "unpkg": "./dtlistgroupitem.min.js",
+  "types": "./DtListGroupItem.d.ts",
+  "browser": {
+    "./sfc": "./DtListGroupItem.vue"
+  }
+}

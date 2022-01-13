@@ -1428,10 +1428,6 @@ this.debuggervue.config = (function (exports, vue) {
   script.render = render;
   script.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
-  //import DtNavbar from "../dtnavbar/DtNavbar";
-
-  //const plugins = [DtNavbarPlugin];
-
   const components = [
     script$d,
     script$b,
@@ -1607,8 +1603,29 @@ this.debuggervue.config = (function (exports, vue) {
     app.provide(DebuggerVueSymbol, DebuggerVue);
   };
 
-  var DebuggerVue = { install };
+  const navbarComponents = {
+    DtNavbar: script$4,
+    DtNavbarBrand: script$3,
+    DtNavbarNav: script$2,
+    DtNavbarItem: script$1,
+    DtNavbarToggler: script,
+  };
 
+  const DtNavbarPlugin = {
+    install(Vue) {
+      for (const prop in navbarComponents) {
+        // eslint-disable-next-line no-prototype-builtins
+        if (navbarComponents.hasOwnProperty(prop)) {
+          const component = navbarComponents[prop];
+          Vue.component(component.name, component);
+        }
+      }
+    },
+  };
+
+  const DebuggerVue = { install };
+
+  exports.DebuggerVue = DebuggerVue;
   exports.DtAccordion = script$d;
   exports.DtAccordionTab = script$b;
   exports.DtAnimatedCard = script$a;
@@ -1622,8 +1639,8 @@ this.debuggervue.config = (function (exports, vue) {
   exports.DtNavbarBrand = script$3;
   exports.DtNavbarItem = script$1;
   exports.DtNavbarNav = script$2;
+  exports.DtNavbarPlugin = DtNavbarPlugin;
   exports.DtNavbarToggler = script;
-  exports["default"] = DebuggerVue;
   exports.install = install;
   exports.useDebuggerVue = useDebuggerVue;
 
