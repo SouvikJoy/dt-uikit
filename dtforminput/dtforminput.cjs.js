@@ -67,11 +67,20 @@ function useFormInput(props, emit) {
     return value;
   };
 
+  const handleAutofocus = () => {
+    vue.nextTick(() => {
+      if (props.autofocus) input.value?.focus();
+    });
+  };
+
+  vue.onMounted(handleAutofocus);
   vue.onMounted(() => {
     if (input.value) {
       input.value.value = props.modelValue;
     }
   });
+
+  vue.onActivated(handleAutofocus);
 
   const computedAriaInvalid = vue.computed(() => {
     if (props.ariaInvalid) {
@@ -128,6 +137,16 @@ function useFormInput(props, emit) {
     emit("update:modelValue", formattedValue);
   };
 
+  const focus = () => {
+    if (!props.disabled) input.value?.focus();
+  };
+
+  const blur = () => {
+    if (!props.disabled) {
+      input.value?.blur();
+    }
+  };
+
   vue.watch(
     () => props.modelValue,
     (newValue) => {
@@ -145,6 +164,8 @@ function useFormInput(props, emit) {
     onInput,
     onChange,
     onBlur,
+    focus,
+    blur,
   };
 }
 

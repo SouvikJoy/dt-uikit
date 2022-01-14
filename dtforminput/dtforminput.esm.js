@@ -1,4 +1,4 @@
-import { computed, ref, onMounted, watch, openBlock, createElementBlock, mergeProps } from 'vue';
+import { computed, ref, onMounted, onActivated, watch, nextTick, openBlock, createElementBlock, mergeProps } from 'vue';
 
 const MAX_UID = 1000000;
 
@@ -65,11 +65,20 @@ function useFormInput(props, emit) {
     return value;
   };
 
+  const handleAutofocus = () => {
+    nextTick(() => {
+      if (props.autofocus) input.value?.focus();
+    });
+  };
+
+  onMounted(handleAutofocus);
   onMounted(() => {
     if (input.value) {
       input.value.value = props.modelValue;
     }
   });
+
+  onActivated(handleAutofocus);
 
   const computedAriaInvalid = computed(() => {
     if (props.ariaInvalid) {
@@ -126,6 +135,16 @@ function useFormInput(props, emit) {
     emit("update:modelValue", formattedValue);
   };
 
+  const focus = () => {
+    if (!props.disabled) input.value?.focus();
+  };
+
+  const blur = () => {
+    if (!props.disabled) {
+      input.value?.blur();
+    }
+  };
+
   watch(
     () => props.modelValue,
     (newValue) => {
@@ -143,6 +162,8 @@ function useFormInput(props, emit) {
     onInput,
     onChange,
     onBlur,
+    focus,
+    blur,
   };
 }
 

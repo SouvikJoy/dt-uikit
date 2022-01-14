@@ -1536,11 +1536,20 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
       return value;
     };
 
+    const handleAutofocus = () => {
+      vue.nextTick(() => {
+        if (props.autofocus) input.value?.focus();
+      });
+    };
+
+    vue.onMounted(handleAutofocus);
     vue.onMounted(() => {
       if (input.value) {
         input.value.value = props.modelValue;
       }
     });
+
+    vue.onActivated(handleAutofocus);
 
     const computedAriaInvalid = vue.computed(() => {
       if (props.ariaInvalid) {
@@ -1597,6 +1606,16 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
       emit("update:modelValue", formattedValue);
     };
 
+    const focus = () => {
+      if (!props.disabled) input.value?.focus();
+    };
+
+    const blur = () => {
+      if (!props.disabled) {
+        input.value?.blur();
+      }
+    };
+
     vue.watch(
       () => props.modelValue,
       (newValue) => {
@@ -1614,6 +1633,8 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
       onInput,
       onChange,
       onBlur,
+      focus,
+      blur,
     };
   }
 

@@ -1,4 +1,4 @@
-import { ref, computed, watchEffect, provide, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot, inject, onMounted, watch, onUnmounted, Transition, withDirectives, vShow, resolveComponent, createElementVNode, toDisplayString, createVNode, createElementBlock, createCommentVNode, withModifiers, mergeProps, reactive } from 'vue';
+import { ref, computed, watchEffect, provide, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot, inject, onMounted, watch, onUnmounted, Transition, withDirectives, vShow, resolveComponent, createElementVNode, toDisplayString, createVNode, createElementBlock, createCommentVNode, withModifiers, onActivated, nextTick, mergeProps, reactive } from 'vue';
 import { Tooltip } from 'bootstrap';
 
 var script$k = {
@@ -1535,11 +1535,20 @@ function useFormInput(props, emit) {
     return value;
   };
 
+  const handleAutofocus = () => {
+    nextTick(() => {
+      if (props.autofocus) input.value?.focus();
+    });
+  };
+
+  onMounted(handleAutofocus);
   onMounted(() => {
     if (input.value) {
       input.value.value = props.modelValue;
     }
   });
+
+  onActivated(handleAutofocus);
 
   const computedAriaInvalid = computed(() => {
     if (props.ariaInvalid) {
@@ -1596,6 +1605,16 @@ function useFormInput(props, emit) {
     emit("update:modelValue", formattedValue);
   };
 
+  const focus = () => {
+    if (!props.disabled) input.value?.focus();
+  };
+
+  const blur = () => {
+    if (!props.disabled) {
+      input.value?.blur();
+    }
+  };
+
   watch(
     () => props.modelValue,
     (newValue) => {
@@ -1613,6 +1632,8 @@ function useFormInput(props, emit) {
     onInput,
     onChange,
     onBlur,
+    focus,
+    blur,
   };
 }
 
