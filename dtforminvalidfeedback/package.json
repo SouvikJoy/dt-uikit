@@ -1,0 +1,9 @@
+{
+  "main": "./dtforminputinvalidfeedback.cjs.js",
+  "module": "./dtforminputinvalidfeedback.esm.js",
+  "unpkg": "./dtforminputinvalidfeedback.min.js",
+  "types": "./DtFormInputInvalidFeedback.d.ts",
+  "browser": {
+    "./sfc": "./DtFormInputInvalidFeedback.vue"
+  }
+}

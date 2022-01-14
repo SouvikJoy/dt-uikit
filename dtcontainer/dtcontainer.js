@@ -1,34 +1,38 @@
 this.debuggervue = this.debuggervue || {};
-this.debuggervue.dtcontainer = (function (vue) {
+this.debuggervue.dtcontainer = (function (exports, vue) {
   'use strict';
 
+  const DT_CONTAINER_PROPS = {
+    tag: {
+      type: String,
+      default: "div",
+    },
+    sm: {
+      type: Boolean,
+      default: false,
+    },
+    md: {
+      type: Boolean,
+      default: false,
+    },
+    lg: {
+      type: Boolean,
+      default: false,
+    },
+    xl: {
+      type: Boolean,
+      default: false,
+    },
+    xxl: {
+      type: Boolean,
+      default: false,
+    },
+  };
+
   var script = {
-    name: "dtContainer",
+    name: "DtContainer",
     props: {
-      tag: {
-        type: String,
-        default: "div",
-      },
-      sm: {
-        type: Boolean,
-        default: false,
-      },
-      md: {
-        type: Boolean,
-        default: false,
-      },
-      lg: {
-        type: Boolean,
-        default: false,
-      },
-      xl: {
-        type: Boolean,
-        default: false,
-      },
-      xxl: {
-        type: Boolean,
-        default: false,
-      },
+      ...DT_CONTAINER_PROPS,
       fluid: {
         type: Boolean,
         default: false,
@@ -57,7 +61,7 @@ this.debuggervue.dtcontainer = (function (vue) {
   };
 
   function render(_ctx, _cache, $props, $setup, $data, $options) {
-    return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.tag), {
       class: vue.normalizeClass($setup.className)
     }, {
       default: vue.withCtx(() => [
@@ -70,6 +74,11 @@ this.debuggervue.dtcontainer = (function (vue) {
   script.render = render;
   script.__file = "src/components/dtcontainer/DtContainer.vue";
 
-  return script;
+  exports.DT_CONTAINER_PROPS = DT_CONTAINER_PROPS;
+  exports["default"] = script;
 
-})(Vue);
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+  return exports;
+
+})({}, Vue);

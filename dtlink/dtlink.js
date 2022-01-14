@@ -2,7 +2,7 @@ this.debuggervue = this.debuggervue || {};
 this.debuggervue.dtlink = (function (exports, vue) {
   'use strict';
 
-  const BLINK_PROPS = {
+  const DTLINK_PROPS = {
     active: { type: Boolean, default: false },
     activeClass: { type: String, default: "router-link-active" },
     append: { type: Boolean, default: false },
@@ -21,7 +21,7 @@ this.debuggervue.dtlink = (function (exports, vue) {
 
   var script = {
     name: "DtLink",
-    props: BLINK_PROPS,
+    props: DTLINK_PROPS,
     emits: ["click"],
     setup(props, { emit, attrs }) {
       const instance = vue.getCurrentInstance();
@@ -144,7 +144,7 @@ this.debuggervue.dtlink = (function (exports, vue) {
   script.render = render;
   script.__file = "src/components/dtlink/DtLink.vue";
 
-  exports.BLINK_PROPS = BLINK_PROPS;
+  exports.DTLINK_PROPS = DTLINK_PROPS;
   exports["default"] = script;
 
   Object.defineProperty(exports, '__esModule', { value: true });

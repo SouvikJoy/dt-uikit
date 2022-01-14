@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var vue = require('vue');
 
-const BLINK_PROPS = {
+const DTLINK_PROPS = {
   active: { type: Boolean, default: false },
   activeClass: { type: String, default: "router-link-active" },
   append: { type: Boolean, default: false },
@@ -23,7 +23,7 @@ const BLINK_PROPS = {
 
 var script = {
   name: "DtLink",
-  props: BLINK_PROPS,
+  props: DTLINK_PROPS,
   emits: ["click"],
   setup(props, { emit, attrs }) {
     const instance = vue.getCurrentInstance();
@@ -146,5 +146,5 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "src/components/dtlink/DtLink.vue";
 
-exports.BLINK_PROPS = BLINK_PROPS;
+exports.DTLINK_PROPS = DTLINK_PROPS;
 exports["default"] = script;

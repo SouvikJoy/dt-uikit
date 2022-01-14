@@ -1,0 +1,9 @@
+{
+  "main": "./dtformtext.cjs.js",
+  "module": "./dtformtext.esm.js",
+  "unpkg": "./dtformtext.min.js",
+  "types": "./DtFormText.d.ts",
+  "browser": {
+    "./sfc": "./DtFormText.vue"
+  }
+}

@@ -1,32 +1,36 @@
 import { computed, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot } from 'vue';
 
+const DT_CONTAINER_PROPS = {
+  tag: {
+    type: String,
+    default: "div",
+  },
+  sm: {
+    type: Boolean,
+    default: false,
+  },
+  md: {
+    type: Boolean,
+    default: false,
+  },
+  lg: {
+    type: Boolean,
+    default: false,
+  },
+  xl: {
+    type: Boolean,
+    default: false,
+  },
+  xxl: {
+    type: Boolean,
+    default: false,
+  },
+};
+
 var script = {
-  name: "dtContainer",
+  name: "DtContainer",
   props: {
-    tag: {
-      type: String,
-      default: "div",
-    },
-    sm: {
-      type: Boolean,
-      default: false,
-    },
-    md: {
-      type: Boolean,
-      default: false,
-    },
-    lg: {
-      type: Boolean,
-      default: false,
-    },
-    xl: {
-      type: Boolean,
-      default: false,
-    },
-    xxl: {
-      type: Boolean,
-      default: false,
-    },
+    ...DT_CONTAINER_PROPS,
     fluid: {
       type: Boolean,
       default: false,
@@ -55,7 +59,7 @@ var script = {
 };
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
+  return (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
     class: normalizeClass($setup.className)
   }, {
     default: withCtx(() => [
@@ -68,4 +72,4 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "src/components/dtcontainer/DtContainer.vue";
 
-export { script as default };
+export { DT_CONTAINER_PROPS, script as default };

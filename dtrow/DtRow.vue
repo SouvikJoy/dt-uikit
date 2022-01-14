@@ -8,7 +8,7 @@
 import { computed } from "vue";
 
 export default {
-  name: "dtRow",
+  name: "DtRow",
   props: {
     tag: {
       type: String,

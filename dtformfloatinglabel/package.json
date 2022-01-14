@@ -1,0 +1,9 @@
+{
+  "main": "./dtforminputfloatinglabel.cjs.js",
+  "module": "./dtforminputfloatinglabel.esm.js",
+  "unpkg": "./dtforminputfloatinglabel.min.js",
+  "types": "./DtFormInputFloatingLabel.d.ts",
+  "browser": {
+    "./sfc": "./DtFormInputFloatingLabel.vue"
+  }
+}

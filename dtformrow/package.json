@@ -1,0 +1,9 @@
+{
+  "main": "./dtformrow.cjs.js",
+  "module": "./dtformrow.esm.js",
+  "unpkg": "./dtformrow.min.js",
+  "types": "./DtFormRow.d.ts",
+  "browser": {
+    "./sfc": "./DtFormRow.vue"
+  }
+}

@@ -1,7 +1,7 @@
 import { computed, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot } from 'vue';
 
 var script = {
-  name: "dtRow",
+  name: "DtRow",
   props: {
     tag: {
       type: String,

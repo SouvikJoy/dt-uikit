@@ -32,7 +32,7 @@
 <script>
 import { computed, getCurrentInstance, ref } from "vue";
 
-export const BLINK_PROPS = {
+export const DTLINK_PROPS = {
   active: { type: Boolean, default: false },
   activeClass: { type: String, default: "router-link-active" },
   append: { type: Boolean, default: false },
@@ -51,7 +51,7 @@ export const BLINK_PROPS = {
 
 export default {
   name: "DtLink",
-  props: BLINK_PROPS,
+  props: DTLINK_PROPS,
   emits: ["click"],
   setup(props, { emit, attrs }) {
     const instance = getCurrentInstance();

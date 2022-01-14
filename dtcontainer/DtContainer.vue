@@ -5,35 +5,39 @@
 </template>
 
 <script>
+export const DT_CONTAINER_PROPS = {
+  tag: {
+    type: String,
+    default: "div",
+  },
+  sm: {
+    type: Boolean,
+    default: false,
+  },
+  md: {
+    type: Boolean,
+    default: false,
+  },
+  lg: {
+    type: Boolean,
+    default: false,
+  },
+  xl: {
+    type: Boolean,
+    default: false,
+  },
+  xxl: {
+    type: Boolean,
+    default: false,
+  },
+};
+
 import { computed } from "vue";
 
 export default {
-  name: "dtContainer",
+  name: "DtContainer",
   props: {
-    tag: {
-      type: String,
-      default: "div",
-    },
-    sm: {
-      type: Boolean,
-      default: false,
-    },
-    md: {
-      type: Boolean,
-      default: false,
-    },
-    lg: {
-      type: Boolean,
-      default: false,
-    },
-    xl: {
-      type: Boolean,
-      default: false,
-    },
-    xxl: {
-      type: Boolean,
-      default: false,
-    },
+    ...DT_CONTAINER_PROPS,
     fluid: {
       type: Boolean,
       default: false,

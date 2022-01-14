@@ -3,7 +3,7 @@
 var vue = require('vue');
 
 var script = {
-  name: "dtRow",
+  name: "DtRow",
   props: {
     tag: {
       type: String,

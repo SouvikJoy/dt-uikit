@@ -3,14 +3,11 @@
 var vue = require('vue');
 
 var script = {
-  name: "dtColumn",
+  name: "DtColumn",
   props: {
     tag: {
       type: String,
       default: "div",
-    },
-    col: {
-      type: String,
     },
     sm: {
       type: String,
@@ -22,6 +19,9 @@ var script = {
       type: String,
     },
     xl: {
+      type: String,
+    },
+    col: {
       type: String,
     },
     offset: {

@@ -1,0 +1,9 @@
+{
+  "main": "./dtforminput.cjs.js",
+  "module": "./dtforminput.esm.js",
+  "unpkg": "./dtforminput.min.js",
+  "types": "./DtFormInput.d.ts",
+  "browser": {
+    "./sfc": "./DtFormInput.vue"
+  }
+}

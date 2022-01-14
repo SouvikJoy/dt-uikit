@@ -3,7 +3,7 @@ this.debuggervue.dtrow = (function (vue) {
   'use strict';
 
   var script = {
-    name: "dtRow",
+    name: "DtRow",
     props: {
       tag: {
         type: String,

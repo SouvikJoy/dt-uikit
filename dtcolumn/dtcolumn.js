@@ -3,14 +3,11 @@ this.debuggervue.dtcolumn = (function (vue) {
   'use strict';
 
   var script = {
-    name: "dtColumn",
+    name: "DtColumn",
     props: {
       tag: {
         type: String,
         default: "div",
-      },
-      col: {
-        type: String,
       },
       sm: {
         type: String,
@@ -22,6 +19,9 @@ this.debuggervue.dtcolumn = (function (vue) {
         type: String,
       },
       xl: {
+        type: String,
+      },
+      col: {
         type: String,
       },
       offset: {

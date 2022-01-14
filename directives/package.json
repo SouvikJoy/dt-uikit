@@ -1,0 +1,5 @@
+{
+  "main": "./directives.cjs.js",
+  "module": "./directives.esm.js",
+  "unpkg": "./directives.min.js"
+}

@@ -8,14 +8,11 @@
 import { computed } from "vue";
 
 export default {
-  name: "dtColumn",
+  name: "DtColumn",
   props: {
     tag: {
       type: String,
       default: "div",
-    },
-    col: {
-      type: String,
     },
     sm: {
       type: String,
@@ -27,6 +24,9 @@ export default {
       type: String,
     },
     xl: {
+      type: String,
+    },
+    col: {
       type: String,
     },
     offset: {
