@@ -2522,20 +2522,11 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
       return value;
     };
 
-    const handleAutofocus = () => {
-      vue.nextTick(() => {
-        if (props.autofocus) input.value?.focus();
-      });
-    };
-
-    vue.onMounted(handleAutofocus);
     vue.onMounted(() => {
       if (input.value) {
         input.value.value = props.modelValue;
       }
     });
-
-    vue.onActivated(handleAutofocus);
 
     const computedAriaInvalid = vue.computed(() => {
       if (props.ariaInvalid) {

@@ -1,4 +1,4 @@
-import { computed, ref, onMounted, onActivated, watch, nextTick, openBlock, createElementBlock, mergeProps } from 'vue';
+import { computed, ref, onMounted, watch, openBlock, createElementBlock, mergeProps } from 'vue';
 
 const MAX_UID = 1000000;
 
@@ -65,20 +65,11 @@ function useFormInput(props, emit) {
     return value;
   };
 
-  const handleAutofocus = () => {
-    nextTick(() => {
-      if (props.autofocus) input.value?.focus();
-    });
-  };
-
-  onMounted(handleAutofocus);
   onMounted(() => {
     if (input.value) {
       input.value.value = props.modelValue;
     }
   });
-
-  onActivated(handleAutofocus);
 
   const computedAriaInvalid = computed(() => {
     if (props.ariaInvalid) {
