@@ -1597,16 +1597,6 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
       emit("update:modelValue", formattedValue);
     };
 
-    const focus = () => {
-      if (!props.disabled) input.value?.focus();
-    };
-
-    const blur = () => {
-      if (!props.disabled) {
-        input.value?.blur();
-      }
-    };
-
     vue.watch(
       () => props.modelValue,
       (newValue) => {
@@ -1624,8 +1614,6 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
       onInput,
       onChange,
       onBlur,
-      focus,
-      blur,
     };
   }
 

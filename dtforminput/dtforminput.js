@@ -128,16 +128,6 @@ this.debuggervue.dtforminput = (function (vue) {
       emit("update:modelValue", formattedValue);
     };
 
-    const focus = () => {
-      if (!props.disabled) input.value?.focus();
-    };
-
-    const blur = () => {
-      if (!props.disabled) {
-        input.value?.blur();
-      }
-    };
-
     vue.watch(
       () => props.modelValue,
       (newValue) => {
@@ -155,8 +145,6 @@ this.debuggervue.dtforminput = (function (vue) {
       onInput,
       onChange,
       onBlur,
-      focus,
-      blur,
     };
   }
 

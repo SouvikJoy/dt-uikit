@@ -1596,16 +1596,6 @@ function useFormInput(props, emit) {
     emit("update:modelValue", formattedValue);
   };
 
-  const focus = () => {
-    if (!props.disabled) input.value?.focus();
-  };
-
-  const blur = () => {
-    if (!props.disabled) {
-      input.value?.blur();
-    }
-  };
-
   watch(
     () => props.modelValue,
     (newValue) => {
@@ -1623,8 +1613,6 @@ function useFormInput(props, emit) {
     onInput,
     onChange,
     onBlur,
-    focus,
-    blur,
   };
 }
 
