@@ -1,9 +1,0 @@
-{
-  "main": "./dtanimatedcard.cjs.js",
-  "module": "./dtanimatedcard.esm.js",
-  "unpkg": "./dtanimatedcard.min.js",
-  "types": "./DtAnimatedCard.d.ts",
-  "browser": {
-    "./sfc": "./DtAnimatedCard.vue"
-  }
-}

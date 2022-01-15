@@ -1,7 +1,7 @@
 import { ref, computed, watchEffect, provide, openBlock, createBlock, resolveDynamicComponent, normalizeClass, withCtx, renderSlot, inject, onMounted, watch, onUnmounted, Transition, withDirectives, vShow, resolveComponent, createElementVNode, toDisplayString, createVNode, createElementBlock, createCommentVNode, withModifiers, onActivated, nextTick, mergeProps, reactive } from 'vue';
 import { Tooltip } from 'bootstrap';
 
-var script$k = {
+var script$j = {
   name: "DtAccordion",
   props: {
     tag: {
@@ -39,7 +39,7 @@ var script$k = {
   },
 };
 
-function render$k(_ctx, _cache, $props, $setup, $data, $options) {
+function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
     class: normalizeClass($setup.className),
     ref: "accordionRef"
@@ -51,8 +51,8 @@ function render$k(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$k.render = render$k;
-script$k.__file = "src/components/dtaccordion/DtAccordion.vue";
+script$j.render = render$j;
+script$j.__file = "src/components/dtaccordion/DtAccordion.vue";
 
 const MAX_UID = 1000000;
 
@@ -184,7 +184,7 @@ const off = function (element, event, handler, delegationFn) {
   );
 };
 
-var script$j = {
+var script$i = {
   name: "DtCollapse",
   props: {
     tag: {
@@ -426,7 +426,7 @@ var script$j = {
   },
 };
 
-function render$j(_ctx, _cache, $props, $setup, $data, $options) {
+function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createBlock(Transition, {
     onBeforeEnter: $setup.beforeEnter,
     onEnter: $setup.enter,
@@ -456,13 +456,13 @@ function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onBeforeEnter", "onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave", "duration"]))
 }
 
-script$j.render = render$j;
-script$j.__file = "src/components/dtcollapse/DtCollapse.vue";
+script$i.render = render$i;
+script$i.__file = "src/components/dtcollapse/DtCollapse.vue";
 
-var script$i = {
+var script$h = {
   name: "DtAccordionTab",
   components: {
-    DtCollapse: script$j,
+    DtCollapse: script$i,
   },
   props: {
     tag: {
@@ -526,9 +526,9 @@ var script$i = {
   },
 };
 
-const _hoisted_1$6 = ["aria-controls"];
+const _hoisted_1$5 = ["aria-controls"];
 
-function render$i(_ctx, _cache, $props, $setup, $data, $options) {
+function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_DtCollapse = resolveComponent("DtCollapse");
 
   return (openBlock(), createBlock(resolveDynamicComponent($props.tag), {
@@ -544,7 +544,7 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
           class: normalizeClass($setup.buttonClassName),
           "aria-expanded": "true",
           "aria-controls": $props.collapseId
-        }, toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$6)
+        }, toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$5)
       ], 2 /* CLASS */),
       createVNode(_component_DtCollapse, {
         id: $props.collapseId,
@@ -565,71 +565,8 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$i.render = render$i;
-script$i.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
-
-var script$h = {
-  name: "DtAnimatedCard",
-  props: {
-    type: String,
-  },
-};
-
-const _hoisted_1$5 = { class: "dt-card" };
-const _hoisted_2$2 = {
-  key: 0,
-  class: "dt-card__img"
-};
-const _hoisted_3$1 = {
-  key: 0,
-  class: "dt-card__interactions"
-};
-const _hoisted_4$1 = {
-  key: 1,
-  class: "dt-card__text"
-};
-const _hoisted_5$1 = {
-  key: 0,
-  class: "dt-card__title"
-};
-
-function render$h(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createElementBlock("div", {
-    class: normalizeClass(`dt-card-content type-${this.type}`)
-  }, [
-    createElementVNode("div", _hoisted_1$5, [
-      (_ctx.$slots.img)
-        ? (openBlock(), createElementBlock("div", _hoisted_2$2, [
-            renderSlot(_ctx.$slots, "img"),
-            (_ctx.$slots.interactions)
-              ? (openBlock(), createElementBlock("div", _hoisted_3$1, [
-                  createElementVNode("span", null, [
-                    renderSlot(_ctx.$slots, "interactions")
-                  ])
-                ]))
-              : createCommentVNode("v-if", true)
-          ]))
-        : createCommentVNode("v-if", true),
-      (_ctx.$slots.text)
-        ? (openBlock(), createElementBlock("div", _hoisted_4$1, [
-            (_ctx.$slots.title)
-              ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
-                  createElementVNode("h3", null, [
-                    renderSlot(_ctx.$slots, "title")
-                  ])
-                ]))
-              : createCommentVNode("v-if", true),
-            createElementVNode("p", null, [
-              renderSlot(_ctx.$slots, "text")
-            ])
-          ]))
-        : createCommentVNode("v-if", true)
-    ])
-  ], 2 /* CLASS */))
-}
-
 script$h.render = render$h;
-script$h.__file = "src/components/dtanimatedcard/DtAnimatedCard.vue";
+script$h.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
 
 var script$g = {
   name: "DtButton",
@@ -733,56 +670,120 @@ script$g.__file = "src/components/dtbutton/DtButton.vue";
 
 var script$f = {
   name: "DtCard",
+  props: {
+    type: String,
+  },
 };
 
-const _hoisted_1$4 = { class: "dt-simple-card dt-component" };
-const _hoisted_2$1 = {
+const _hoisted_1$4 = { key: 0 };
+const _hoisted_2$1 = { class: "dt-card" };
+const _hoisted_3 = {
   key: 0,
-  class: "dt-simple-card-header"
+  class: "dt-card__img"
 };
-const _hoisted_3 = { class: "dt-simple-card-body" };
 const _hoisted_4 = {
   key: 0,
-  class: "dt-simple-card-title"
+  class: "dt-card__interactions"
 };
 const _hoisted_5 = {
   key: 1,
-  class: "dt-simple-card-subtitle"
+  class: "dt-card__text"
 };
-const _hoisted_6 = { class: "dt-simple-card-content" };
-const _hoisted_7 = {
+const _hoisted_6 = {
+  key: 0,
+  class: "dt-card__title"
+};
+const _hoisted_7 = { key: 1 };
+const _hoisted_8 = { class: "dt-card-content dt-card-basic" };
+const _hoisted_9 = {
+  key: 0,
+  class: "dt-card-header"
+};
+const _hoisted_10 = { class: "dt-card-body" };
+const _hoisted_11 = {
+  key: 0,
+  class: "dt-card-title"
+};
+const _hoisted_12 = {
+  key: 1,
+  class: "dt-card-subtitle"
+};
+const _hoisted_13 = {
   key: 2,
-  class: "dt-simple-card-footer"
+  class: "dt-card-content"
+};
+const _hoisted_14 = {
+  key: 3,
+  class: "dt-card-interactions"
 };
 
 function render$f(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createElementBlock("div", _hoisted_1$4, [
-    (_ctx.$slots.header)
-      ? (openBlock(), createElementBlock("div", _hoisted_2$1, [
-          renderSlot(_ctx.$slots, "header")
-        ]))
-      : createCommentVNode("v-if", true),
-    createElementVNode("div", _hoisted_3, [
-      (_ctx.$slots.title)
-        ? (openBlock(), createElementBlock("div", _hoisted_4, [
-            renderSlot(_ctx.$slots, "title")
-          ]))
-        : createCommentVNode("v-if", true),
-      (_ctx.$slots.subtitle)
-        ? (openBlock(), createElementBlock("div", _hoisted_5, [
-            renderSlot(_ctx.$slots, "subtitle")
-          ]))
-        : createCommentVNode("v-if", true),
-      createElementVNode("div", _hoisted_6, [
-        renderSlot(_ctx.$slots, "content")
-      ]),
-      (_ctx.$slots.footer)
-        ? (openBlock(), createElementBlock("div", _hoisted_7, [
-            renderSlot(_ctx.$slots, "footer")
-          ]))
-        : createCommentVNode("v-if", true)
-    ])
-  ]))
+  return ($props.type !== undefined)
+    ? (openBlock(), createElementBlock("div", _hoisted_1$4, [
+        createElementVNode("div", {
+          class: normalizeClass(`dt-card-content type-${this.type}`)
+        }, [
+          createElementVNode("div", _hoisted_2$1, [
+            (_ctx.$slots.header)
+              ? (openBlock(), createElementBlock("div", _hoisted_3, [
+                  renderSlot(_ctx.$slots, "header"),
+                  (_ctx.$slots.interactions)
+                    ? (openBlock(), createElementBlock("div", _hoisted_4, [
+                        createElementVNode("span", null, [
+                          renderSlot(_ctx.$slots, "interactions")
+                        ])
+                      ]))
+                    : createCommentVNode("v-if", true)
+                ]))
+              : createCommentVNode("v-if", true),
+            (_ctx.$slots.content)
+              ? (openBlock(), createElementBlock("div", _hoisted_5, [
+                  (_ctx.$slots.title)
+                    ? (openBlock(), createElementBlock("div", _hoisted_6, [
+                        createElementVNode("h3", null, [
+                          renderSlot(_ctx.$slots, "title")
+                        ])
+                      ]))
+                    : createCommentVNode("v-if", true),
+                  createElementVNode("p", null, [
+                    renderSlot(_ctx.$slots, "content")
+                  ])
+                ]))
+              : createCommentVNode("v-if", true)
+          ])
+        ], 2 /* CLASS */)
+      ]))
+    : (openBlock(), createElementBlock("div", _hoisted_7, [
+        createElementVNode("div", _hoisted_8, [
+          (_ctx.$slots.header)
+            ? (openBlock(), createElementBlock("div", _hoisted_9, [
+                renderSlot(_ctx.$slots, "header")
+              ]))
+            : createCommentVNode("v-if", true),
+          createElementVNode("div", _hoisted_10, [
+            (_ctx.$slots.title)
+              ? (openBlock(), createElementBlock("div", _hoisted_11, [
+                  renderSlot(_ctx.$slots, "title")
+                ]))
+              : createCommentVNode("v-if", true),
+            (_ctx.$slots.subtitle)
+              ? (openBlock(), createElementBlock("div", _hoisted_12, [
+                  renderSlot(_ctx.$slots, "subtitle")
+                ]))
+              : createCommentVNode("v-if", true),
+            (_ctx.$slots.content)
+              ? (openBlock(), createElementBlock("div", _hoisted_13, [
+                  renderSlot(_ctx.$slots, "content")
+                ]))
+              : createCommentVNode("v-if", true),
+            (_ctx.$slots.interactions)
+              ? (openBlock(), createElementBlock("div", _hoisted_14, [
+                  renderSlot(_ctx.$slots, "interactions")
+                ]))
+              : createCommentVNode("v-if", true)
+          ])
+        ])
+      ]))
 }
 
 script$f.render = render$f;
@@ -1188,7 +1189,7 @@ script$a.__file = "src/components/dtnavbarbrand/DtNavbarBrand.vue";
 
 var script$9 = {
   name: "DtNavbarNav",
-  components: { dtCollapse: script$j },
+  components: { dtCollapse: script$i },
   props: {
     tag: {
       type: String,
@@ -2000,12 +2001,12 @@ const navbarComponents = {
   DtNavbarNav: script$9,
   DtNavbarItem: script$8,
   DtNavbarToggler: script$7,
-  DtCollapse: script$j,
+  DtCollapse: script$i,
 };
 
 const accordionComponents = {
-  DtAccordion: script$k,
-  DtAccordionTab: script$i,
+  DtAccordion: script$j,
+  DtAccordionTab: script$h,
 };
 
 const formComponents = {
@@ -2024,9 +2025,8 @@ const components = [
   script$9,
   script$8,
   script$7,
-  script$j,
-  script$k,
   script$i,
+  script$j,
   script$h,
   script$g,
   script$f,
@@ -2242,4 +2242,4 @@ const DtFormPlugin = {
 
 const DebuggerVue = { install };
 
-export { DebuggerVue, script$k as DtAccordion, DtAccordionPlugin, script$i as DtAccordionTab, script$h as DtAnimatedCard, script$g as DtButton, script$f as DtCard, script$j as DtCollapse, script$d as DtColumn, script$e as DtContainer, script$6 as DtForm, script as DtFormFloatingLabel, script$5 as DtFormInput, script$1 as DtFormInputInvalidFeedback, script$2 as DtFormInputValidFeedback, DtFormPlugin, script$4 as DtFormRow, script$3 as DtFormText, script$c as DtIcon, script$b as DtNavbar, script$a as DtNavbarBrand, script$8 as DtNavbarItem, script$9 as DtNavbarNav, DtNavbarPlugin, script$7 as DtNavbarToggler, install, useDebuggerVue };
+export { DebuggerVue, script$j as DtAccordion, DtAccordionPlugin, script$h as DtAccordionTab, script$g as DtButton, script$f as DtCard, script$i as DtCollapse, script$d as DtColumn, script$e as DtContainer, script$6 as DtForm, script as DtFormFloatingLabel, script$5 as DtFormInput, script$1 as DtFormInputInvalidFeedback, script$2 as DtFormInputValidFeedback, DtFormPlugin, script$4 as DtFormRow, script$3 as DtFormText, script$c as DtIcon, script$b as DtNavbar, script$a as DtNavbarBrand, script$8 as DtNavbarItem, script$9 as DtNavbarNav, DtNavbarPlugin, script$7 as DtNavbarToggler, install, useDebuggerVue };

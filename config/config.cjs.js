@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var vue = require('vue');
 var bootstrap = require('bootstrap');
 
-var script$k = {
+var script$j = {
   name: "DtAccordion",
   props: {
     tag: {
@@ -43,7 +43,7 @@ var script$k = {
   },
 };
 
-function render$k(_ctx, _cache, $props, $setup, $data, $options) {
+function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className),
     ref: "accordionRef"
@@ -55,8 +55,8 @@ function render$k(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$k.render = render$k;
-script$k.__file = "src/components/dtaccordion/DtAccordion.vue";
+script$j.render = render$j;
+script$j.__file = "src/components/dtaccordion/DtAccordion.vue";
 
 const MAX_UID = 1000000;
 
@@ -188,7 +188,7 @@ const off = function (element, event, handler, delegationFn) {
   );
 };
 
-var script$j = {
+var script$i = {
   name: "DtCollapse",
   props: {
     tag: {
@@ -430,7 +430,7 @@ var script$j = {
   },
 };
 
-function render$j(_ctx, _cache, $props, $setup, $data, $options) {
+function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.Transition, {
     onBeforeEnter: $setup.beforeEnter,
     onEnter: $setup.enter,
@@ -460,13 +460,13 @@ function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onBeforeEnter", "onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave", "duration"]))
 }
 
-script$j.render = render$j;
-script$j.__file = "src/components/dtcollapse/DtCollapse.vue";
+script$i.render = render$i;
+script$i.__file = "src/components/dtcollapse/DtCollapse.vue";
 
-var script$i = {
+var script$h = {
   name: "DtAccordionTab",
   components: {
-    DtCollapse: script$j,
+    DtCollapse: script$i,
   },
   props: {
     tag: {
@@ -530,9 +530,9 @@ var script$i = {
   },
 };
 
-const _hoisted_1$6 = ["aria-controls"];
+const _hoisted_1$5 = ["aria-controls"];
 
-function render$i(_ctx, _cache, $props, $setup, $data, $options) {
+function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_DtCollapse = vue.resolveComponent("DtCollapse");
 
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
@@ -548,7 +548,7 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
           class: vue.normalizeClass($setup.buttonClassName),
           "aria-expanded": "true",
           "aria-controls": $props.collapseId
-        }, vue.toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$6)
+        }, vue.toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$5)
       ], 2 /* CLASS */),
       vue.createVNode(_component_DtCollapse, {
         id: $props.collapseId,
@@ -569,71 +569,8 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$i.render = render$i;
-script$i.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
-
-var script$h = {
-  name: "DtAnimatedCard",
-  props: {
-    type: String,
-  },
-};
-
-const _hoisted_1$5 = { class: "dt-card" };
-const _hoisted_2$2 = {
-  key: 0,
-  class: "dt-card__img"
-};
-const _hoisted_3$1 = {
-  key: 0,
-  class: "dt-card__interactions"
-};
-const _hoisted_4$1 = {
-  key: 1,
-  class: "dt-card__text"
-};
-const _hoisted_5$1 = {
-  key: 0,
-  class: "dt-card__title"
-};
-
-function render$h(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", {
-    class: vue.normalizeClass(`dt-card-content type-${this.type}`)
-  }, [
-    vue.createElementVNode("div", _hoisted_1$5, [
-      (_ctx.$slots.img)
-        ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$2, [
-            vue.renderSlot(_ctx.$slots, "img"),
-            (_ctx.$slots.interactions)
-              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$1, [
-                  vue.createElementVNode("span", null, [
-                    vue.renderSlot(_ctx.$slots, "interactions")
-                  ])
-                ]))
-              : vue.createCommentVNode("v-if", true)
-          ]))
-        : vue.createCommentVNode("v-if", true),
-      (_ctx.$slots.text)
-        ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$1, [
-            (_ctx.$slots.title)
-              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$1, [
-                  vue.createElementVNode("h3", null, [
-                    vue.renderSlot(_ctx.$slots, "title")
-                  ])
-                ]))
-              : vue.createCommentVNode("v-if", true),
-            vue.createElementVNode("p", null, [
-              vue.renderSlot(_ctx.$slots, "text")
-            ])
-          ]))
-        : vue.createCommentVNode("v-if", true)
-    ])
-  ], 2 /* CLASS */))
-}
-
 script$h.render = render$h;
-script$h.__file = "src/components/dtanimatedcard/DtAnimatedCard.vue";
+script$h.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
 
 var script$g = {
   name: "DtButton",
@@ -737,56 +674,120 @@ script$g.__file = "src/components/dtbutton/DtButton.vue";
 
 var script$f = {
   name: "DtCard",
+  props: {
+    type: String,
+  },
 };
 
-const _hoisted_1$4 = { class: "dt-simple-card dt-component" };
-const _hoisted_2$1 = {
+const _hoisted_1$4 = { key: 0 };
+const _hoisted_2$1 = { class: "dt-card" };
+const _hoisted_3 = {
   key: 0,
-  class: "dt-simple-card-header"
+  class: "dt-card__img"
 };
-const _hoisted_3 = { class: "dt-simple-card-body" };
 const _hoisted_4 = {
   key: 0,
-  class: "dt-simple-card-title"
+  class: "dt-card__interactions"
 };
 const _hoisted_5 = {
   key: 1,
-  class: "dt-simple-card-subtitle"
+  class: "dt-card__text"
 };
-const _hoisted_6 = { class: "dt-simple-card-content" };
-const _hoisted_7 = {
+const _hoisted_6 = {
+  key: 0,
+  class: "dt-card__title"
+};
+const _hoisted_7 = { key: 1 };
+const _hoisted_8 = { class: "dt-card-content dt-card-basic" };
+const _hoisted_9 = {
+  key: 0,
+  class: "dt-card-header"
+};
+const _hoisted_10 = { class: "dt-card-body" };
+const _hoisted_11 = {
+  key: 0,
+  class: "dt-card-title"
+};
+const _hoisted_12 = {
+  key: 1,
+  class: "dt-card-subtitle"
+};
+const _hoisted_13 = {
   key: 2,
-  class: "dt-simple-card-footer"
+  class: "dt-card-content"
+};
+const _hoisted_14 = {
+  key: 3,
+  class: "dt-card-interactions"
 };
 
 function render$f(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$4, [
-    (_ctx.$slots.header)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$1, [
-          vue.renderSlot(_ctx.$slots, "header")
-        ]))
-      : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("div", _hoisted_3, [
-      (_ctx.$slots.title)
-        ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4, [
-            vue.renderSlot(_ctx.$slots, "title")
-          ]))
-        : vue.createCommentVNode("v-if", true),
-      (_ctx.$slots.subtitle)
-        ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5, [
-            vue.renderSlot(_ctx.$slots, "subtitle")
-          ]))
-        : vue.createCommentVNode("v-if", true),
-      vue.createElementVNode("div", _hoisted_6, [
-        vue.renderSlot(_ctx.$slots, "content")
-      ]),
-      (_ctx.$slots.footer)
-        ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_7, [
-            vue.renderSlot(_ctx.$slots, "footer")
-          ]))
-        : vue.createCommentVNode("v-if", true)
-    ])
-  ]))
+  return ($props.type !== undefined)
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$4, [
+        vue.createElementVNode("div", {
+          class: vue.normalizeClass(`dt-card-content type-${this.type}`)
+        }, [
+          vue.createElementVNode("div", _hoisted_2$1, [
+            (_ctx.$slots.header)
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3, [
+                  vue.renderSlot(_ctx.$slots, "header"),
+                  (_ctx.$slots.interactions)
+                    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4, [
+                        vue.createElementVNode("span", null, [
+                          vue.renderSlot(_ctx.$slots, "interactions")
+                        ])
+                      ]))
+                    : vue.createCommentVNode("v-if", true)
+                ]))
+              : vue.createCommentVNode("v-if", true),
+            (_ctx.$slots.content)
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5, [
+                  (_ctx.$slots.title)
+                    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_6, [
+                        vue.createElementVNode("h3", null, [
+                          vue.renderSlot(_ctx.$slots, "title")
+                        ])
+                      ]))
+                    : vue.createCommentVNode("v-if", true),
+                  vue.createElementVNode("p", null, [
+                    vue.renderSlot(_ctx.$slots, "content")
+                  ])
+                ]))
+              : vue.createCommentVNode("v-if", true)
+          ])
+        ], 2 /* CLASS */)
+      ]))
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_7, [
+        vue.createElementVNode("div", _hoisted_8, [
+          (_ctx.$slots.header)
+            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_9, [
+                vue.renderSlot(_ctx.$slots, "header")
+              ]))
+            : vue.createCommentVNode("v-if", true),
+          vue.createElementVNode("div", _hoisted_10, [
+            (_ctx.$slots.title)
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_11, [
+                  vue.renderSlot(_ctx.$slots, "title")
+                ]))
+              : vue.createCommentVNode("v-if", true),
+            (_ctx.$slots.subtitle)
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_12, [
+                  vue.renderSlot(_ctx.$slots, "subtitle")
+                ]))
+              : vue.createCommentVNode("v-if", true),
+            (_ctx.$slots.content)
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_13, [
+                  vue.renderSlot(_ctx.$slots, "content")
+                ]))
+              : vue.createCommentVNode("v-if", true),
+            (_ctx.$slots.interactions)
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_14, [
+                  vue.renderSlot(_ctx.$slots, "interactions")
+                ]))
+              : vue.createCommentVNode("v-if", true)
+          ])
+        ])
+      ]))
 }
 
 script$f.render = render$f;
@@ -1192,7 +1193,7 @@ script$a.__file = "src/components/dtnavbarbrand/DtNavbarBrand.vue";
 
 var script$9 = {
   name: "DtNavbarNav",
-  components: { dtCollapse: script$j },
+  components: { dtCollapse: script$i },
   props: {
     tag: {
       type: String,
@@ -2004,12 +2005,12 @@ const navbarComponents = {
   DtNavbarNav: script$9,
   DtNavbarItem: script$8,
   DtNavbarToggler: script$7,
-  DtCollapse: script$j,
+  DtCollapse: script$i,
 };
 
 const accordionComponents = {
-  DtAccordion: script$k,
-  DtAccordionTab: script$i,
+  DtAccordion: script$j,
+  DtAccordionTab: script$h,
 };
 
 const formComponents = {
@@ -2028,9 +2029,8 @@ const components = [
   script$9,
   script$8,
   script$7,
-  script$j,
-  script$k,
   script$i,
+  script$j,
   script$h,
   script$g,
   script$f,
@@ -2247,13 +2247,12 @@ const DtFormPlugin = {
 const DebuggerVue = { install };
 
 exports.DebuggerVue = DebuggerVue;
-exports.DtAccordion = script$k;
+exports.DtAccordion = script$j;
 exports.DtAccordionPlugin = DtAccordionPlugin;
-exports.DtAccordionTab = script$i;
-exports.DtAnimatedCard = script$h;
+exports.DtAccordionTab = script$h;
 exports.DtButton = script$g;
 exports.DtCard = script$f;
-exports.DtCollapse = script$j;
+exports.DtCollapse = script$i;
 exports.DtColumn = script$d;
 exports.DtContainer = script$e;
 exports.DtForm = script$6;

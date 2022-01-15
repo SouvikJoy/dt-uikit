@@ -3,6 +3,7 @@ import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
 export interface DtCardProps {
+    type?: string | undefined;
 }
 
 export interface DtCardSlots {
@@ -10,7 +11,7 @@ export interface DtCardSlots {
     title: () => VNode[];
     subtitle: () => VNode[];
     content: () => VNode[];
-    footer: () => VNode[];
+    interactions: () => VNode[];
 }
 
 export declare type DtCardEmits = {
