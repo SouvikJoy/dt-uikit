@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var vue = require('vue');
 var bootstrap = require('bootstrap');
 
-var script$j = {
+var script$k = {
   name: "DtAccordion",
   props: {
     tag: {
@@ -43,7 +43,7 @@ var script$j = {
   },
 };
 
-function render$j(_ctx, _cache, $props, $setup, $data, $options) {
+function render$k(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className),
     ref: "accordionRef"
@@ -55,8 +55,8 @@ function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$j.render = render$j;
-script$j.__file = "src/components/dtaccordion/DtAccordion.vue";
+script$k.render = render$k;
+script$k.__file = "src/components/dtaccordion/DtAccordion.vue";
 
 const MAX_UID = 1000000;
 
@@ -188,7 +188,7 @@ const off = function (element, event, handler, delegationFn) {
   );
 };
 
-var script$i = {
+var script$j = {
   name: "DtCollapse",
   props: {
     tag: {
@@ -430,7 +430,7 @@ var script$i = {
   },
 };
 
-function render$i(_ctx, _cache, $props, $setup, $data, $options) {
+function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.Transition, {
     onBeforeEnter: $setup.beforeEnter,
     onEnter: $setup.enter,
@@ -460,13 +460,13 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onBeforeEnter", "onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave", "duration"]))
 }
 
-script$i.render = render$i;
-script$i.__file = "src/components/dtcollapse/DtCollapse.vue";
+script$j.render = render$j;
+script$j.__file = "src/components/dtcollapse/DtCollapse.vue";
 
-var script$h = {
+var script$i = {
   name: "DtAccordionTab",
   components: {
-    DtCollapse: script$i,
+    DtCollapse: script$j,
   },
   props: {
     tag: {
@@ -532,7 +532,7 @@ var script$h = {
 
 const _hoisted_1$5 = ["aria-controls"];
 
-function render$h(_ctx, _cache, $props, $setup, $data, $options) {
+function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_DtCollapse = vue.resolveComponent("DtCollapse");
 
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
@@ -569,10 +569,10 @@ function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$h.render = render$h;
-script$h.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
+script$i.render = render$i;
+script$i.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
 
-var script$g = {
+var script$h = {
   name: "DtButton",
   props: {
     tag: {
@@ -655,7 +655,7 @@ var script$g = {
   },
 };
 
-function render$g(_ctx, _cache, $props, $setup, $data, $options) {
+function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     type: $props.type,
     role: $props.role,
@@ -669,10 +669,10 @@ function render$g(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["type", "role", "class", "onClick"]))
 }
 
-script$g.render = render$g;
-script$g.__file = "src/components/dtbutton/DtButton.vue";
+script$h.render = render$h;
+script$h.__file = "src/components/dtbutton/DtButton.vue";
 
-var script$f = {
+var script$g = {
   name: "DtCard",
   props: {
     type: String,
@@ -721,7 +721,7 @@ const _hoisted_14 = {
   class: "dt-card-interactions"
 };
 
-function render$f(_ctx, _cache, $props, $setup, $data, $options) {
+function render$g(_ctx, _cache, $props, $setup, $data, $options) {
   return ($props.type !== undefined)
     ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$4, [
         vue.createElementVNode("div", {
@@ -790,8 +790,8 @@ function render$f(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$f.render = render$f;
-script$f.__file = "src/components/dtcard/DtCard.vue";
+script$g.render = render$g;
+script$g.__file = "src/components/dtcard/DtCard.vue";
 
 const DT_CONTAINER_PROPS = {
   tag: {
@@ -820,7 +820,7 @@ const DT_CONTAINER_PROPS = {
   },
 };
 
-var script$e = {
+var script$f = {
   name: "DtContainer",
   props: {
     ...DT_CONTAINER_PROPS,
@@ -851,7 +851,7 @@ var script$e = {
   },
 };
 
-function render$e(_ctx, _cache, $props, $setup, $data, $options) {
+function render$f(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.tag), {
     class: vue.normalizeClass($setup.className)
   }, {
@@ -862,10 +862,10 @@ function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$e.render = render$e;
-script$e.__file = "src/components/dtcontainer/DtContainer.vue";
+script$f.render = render$f;
+script$f.__file = "src/components/dtcontainer/DtContainer.vue";
 
-var script$d = {
+var script$e = {
   name: "DtColumn",
   props: {
     tag: {
@@ -933,6 +933,78 @@ var script$d = {
   },
 };
 
+function render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.className)
+  }, {
+    default: vue.withCtx(() => [
+      vue.renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$e.render = render$e;
+script$e.__file = "src/components/dtcolumn/DtColumn.vue";
+
+var script$d = {
+  name: "DtRow",
+  props: {
+    tag: {
+      type: String,
+      default: "div",
+    },
+    start: {
+      type: Boolean,
+      default: false,
+    },
+    end: {
+      type: Boolean,
+      default: false,
+    },
+    center: {
+      type: Boolean,
+      default: false,
+    },
+    between: {
+      type: Boolean,
+      default: false,
+    },
+    around: {
+      type: Boolean,
+      default: false,
+    },
+    cols: {
+      type: [String, Array],
+    },
+  },
+  setup(props) {
+    const className = vue.computed(() => {
+      return [
+        "row",
+        props.cols ? `${spreadProps(props.cols)}` : "",
+        props.start && "justify-content-start",
+        props.end && "justify-content-end",
+        props.center && "justify-content-center",
+        props.between && "justify-content-between",
+        props.around && "justify-content-around",
+      ];
+    });
+
+    const spreadProps = (props) => {
+      if (typeof props === "string") {
+        return `row-cols-${props}`;
+      }
+      return props.map(() => `row-cols-${props}`.trim()).join(" ");
+    };
+
+    return {
+      className,
+      props,
+    };
+  },
+};
+
 function render$d(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className)
@@ -945,7 +1017,7 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script$d.render = render$d;
-script$d.__file = "src/components/dtcolumn/DtColumn.vue";
+script$d.__file = "src/components/dtrow/DtRow.vue";
 
 var script$c = {
   name: "DtIcon",
@@ -1193,7 +1265,7 @@ script$a.__file = "src/components/dtnavbarbrand/DtNavbarBrand.vue";
 
 var script$9 = {
   name: "DtNavbarNav",
-  components: { dtCollapse: script$i },
+  components: { dtCollapse: script$j },
   props: {
     tag: {
       type: String,
@@ -2005,12 +2077,12 @@ const navbarComponents = {
   DtNavbarNav: script$9,
   DtNavbarItem: script$8,
   DtNavbarToggler: script$7,
-  DtCollapse: script$i,
+  DtCollapse: script$j,
 };
 
 const accordionComponents = {
-  DtAccordion: script$j,
-  DtAccordionTab: script$h,
+  DtAccordion: script$k,
+  DtAccordionTab: script$i,
 };
 
 const formComponents = {
@@ -2029,13 +2101,13 @@ const components = [
   script$9,
   script$8,
   script$7,
-  script$i,
   script$j,
+  script$k,
+  script$i,
   script$h,
   script$g,
   script$f,
   script$e,
-  script$d,
   script$c,
   script$6,
   script$5,
@@ -2044,6 +2116,7 @@ const components = [
   script$2,
   script$1,
   script,
+  script$d,
 ];
 
 const FilterMatchMode = {
@@ -2247,14 +2320,14 @@ const DtFormPlugin = {
 const DebuggerVue = { install };
 
 exports.DebuggerVue = DebuggerVue;
-exports.DtAccordion = script$j;
+exports.DtAccordion = script$k;
 exports.DtAccordionPlugin = DtAccordionPlugin;
-exports.DtAccordionTab = script$h;
-exports.DtButton = script$g;
-exports.DtCard = script$f;
-exports.DtCollapse = script$i;
-exports.DtColumn = script$d;
-exports.DtContainer = script$e;
+exports.DtAccordionTab = script$i;
+exports.DtButton = script$h;
+exports.DtCard = script$g;
+exports.DtCollapse = script$j;
+exports.DtColumn = script$e;
+exports.DtContainer = script$f;
 exports.DtForm = script$6;
 exports.DtFormFloatingLabel = script;
 exports.DtFormInput = script$5;
@@ -2270,5 +2343,6 @@ exports.DtNavbarItem = script$8;
 exports.DtNavbarNav = script$9;
 exports.DtNavbarPlugin = DtNavbarPlugin;
 exports.DtNavbarToggler = script$7;
+exports.DtRow = script$d;
 exports.install = install;
 exports.useDebuggerVue = useDebuggerVue;
