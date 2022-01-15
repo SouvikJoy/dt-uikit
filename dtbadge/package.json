@@ -1,0 +1,9 @@
+{
+  "main": "./dtbadge.cjs.js",
+  "module": "./dtbadge.esm.js",
+  "unpkg": "./dtbadge.min.js",
+  "types": "./DtBadge.d.ts",
+  "browser": {
+    "./sfc": "./DtBadge.vue"
+  }
+}

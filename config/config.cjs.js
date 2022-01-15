@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var vue = require('vue');
 var bootstrap = require('bootstrap');
 
-var script$k = {
+var script$o = {
   name: "DtAccordion",
   props: {
     tag: {
@@ -43,7 +43,7 @@ var script$k = {
   },
 };
 
-function render$k(_ctx, _cache, $props, $setup, $data, $options) {
+function render$o(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className),
     ref: "accordionRef"
@@ -55,8 +55,8 @@ function render$k(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$k.render = render$k;
-script$k.__file = "src/components/dtaccordion/DtAccordion.vue";
+script$o.render = render$o;
+script$o.__file = "src/components/dtaccordion/DtAccordion.vue";
 
 const MAX_UID = 1000000;
 
@@ -188,7 +188,7 @@ const off = function (element, event, handler, delegationFn) {
   );
 };
 
-var script$j = {
+var script$n = {
   name: "DtCollapse",
   props: {
     tag: {
@@ -430,7 +430,7 @@ var script$j = {
   },
 };
 
-function render$j(_ctx, _cache, $props, $setup, $data, $options) {
+function render$n(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.Transition, {
     onBeforeEnter: $setup.beforeEnter,
     onEnter: $setup.enter,
@@ -460,13 +460,13 @@ function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["onBeforeEnter", "onEnter", "onAfterEnter", "onBeforeLeave", "onLeave", "onAfterLeave", "duration"]))
 }
 
-script$j.render = render$j;
-script$j.__file = "src/components/dtcollapse/DtCollapse.vue";
+script$n.render = render$n;
+script$n.__file = "src/components/dtcollapse/DtCollapse.vue";
 
-var script$i = {
+var script$m = {
   name: "DtAccordionTab",
   components: {
-    DtCollapse: script$j,
+    DtCollapse: script$n,
   },
   props: {
     tag: {
@@ -530,9 +530,9 @@ var script$i = {
   },
 };
 
-const _hoisted_1$5 = ["aria-controls"];
+const _hoisted_1$6 = ["aria-controls"];
 
-function render$i(_ctx, _cache, $props, $setup, $data, $options) {
+function render$m(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_DtCollapse = vue.resolveComponent("DtCollapse");
 
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
@@ -548,7 +548,7 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
           class: vue.normalizeClass($setup.buttonClassName),
           "aria-expanded": "true",
           "aria-controls": $props.collapseId
-        }, vue.toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$5)
+        }, vue.toDisplayString($props.headerTitle), 11 /* TEXT, CLASS, PROPS */, _hoisted_1$6)
       ], 2 /* CLASS */),
       vue.createVNode(_component_DtCollapse, {
         id: $props.collapseId,
@@ -569,10 +569,10 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$i.render = render$i;
-script$i.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
+script$m.render = render$m;
+script$m.__file = "src/components/dtaccordiontab/DtAccordionTab.vue";
 
-var script$h = {
+var script$l = {
   name: "DtButton",
   props: {
     tag: {
@@ -655,7 +655,7 @@ var script$h = {
   },
 };
 
-function render$h(_ctx, _cache, $props, $setup, $data, $options) {
+function render$l(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     type: $props.type,
     role: $props.role,
@@ -669,17 +669,62 @@ function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["type", "role", "class", "onClick"]))
 }
 
-script$h.render = render$h;
-script$h.__file = "src/components/dtbutton/DtButton.vue";
+script$l.render = render$l;
+script$l.__file = "src/components/dtbutton/DtButton.vue";
 
-var script$g = {
+var script$k = {
+  name: "DtBadge",
+  props: {
+    color: String,
+    pill: Boolean,
+    dot: Boolean,
+    notification: Boolean,
+    tag: {
+      type: String,
+      default: "span",
+    },
+  },
+  setup(props, { attrs }) {
+    const className = vue.computed(() => {
+      return [
+        "badge",
+        props.color && `bg-${props.color}`,
+        props.pill && "rounded-pill",
+        props.dot && "badge-dot",
+        props.notification && "badge-notification",
+      ];
+    });
+
+    return {
+      className,
+      attrs,
+      props,
+    };
+  },
+};
+
+function render$k(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.className)
+  }, {
+    default: vue.withCtx(() => [
+      vue.renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$k.render = render$k;
+script$k.__file = "src/components/dtbadge/DtBadge.vue";
+
+var script$j = {
   name: "DtCard",
   props: {
     type: String,
   },
 };
 
-const _hoisted_1$4 = { key: 0 };
+const _hoisted_1$5 = { key: 0 };
 const _hoisted_2$1 = { class: "dt-card" };
 const _hoisted_3 = {
   key: 0,
@@ -721,9 +766,9 @@ const _hoisted_14 = {
   class: "dt-card-interactions"
 };
 
-function render$g(_ctx, _cache, $props, $setup, $data, $options) {
+function render$j(_ctx, _cache, $props, $setup, $data, $options) {
   return ($props.type !== undefined)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$4, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [
         vue.createElementVNode("div", {
           class: vue.normalizeClass(`dt-card-content type-${this.type}`)
         }, [
@@ -790,8 +835,8 @@ function render$g(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$g.render = render$g;
-script$g.__file = "src/components/dtcard/DtCard.vue";
+script$j.render = render$j;
+script$j.__file = "src/components/dtcard/DtCard.vue";
 
 const DT_CONTAINER_PROPS = {
   tag: {
@@ -820,7 +865,7 @@ const DT_CONTAINER_PROPS = {
   },
 };
 
-var script$f = {
+var script$i = {
   name: "DtContainer",
   props: {
     ...DT_CONTAINER_PROPS,
@@ -851,7 +896,7 @@ var script$f = {
   },
 };
 
-function render$f(_ctx, _cache, $props, $setup, $data, $options) {
+function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.tag), {
     class: vue.normalizeClass($setup.className)
   }, {
@@ -862,10 +907,10 @@ function render$f(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$f.render = render$f;
-script$f.__file = "src/components/dtcontainer/DtContainer.vue";
+script$i.render = render$i;
+script$i.__file = "src/components/dtcontainer/DtContainer.vue";
 
-var script$e = {
+var script$h = {
   name: "DtColumn",
   props: {
     tag: {
@@ -933,7 +978,7 @@ var script$e = {
   },
 };
 
-function render$e(_ctx, _cache, $props, $setup, $data, $options) {
+function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className)
   }, {
@@ -944,10 +989,10 @@ function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$e.render = render$e;
-script$e.__file = "src/components/dtcolumn/DtColumn.vue";
+script$h.render = render$h;
+script$h.__file = "src/components/dtcolumn/DtColumn.vue";
 
-var script$d = {
+var script$g = {
   name: "DtRow",
   props: {
     tag: {
@@ -1005,7 +1050,7 @@ var script$d = {
   },
 };
 
-function render$d(_ctx, _cache, $props, $setup, $data, $options) {
+function render$g(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className)
   }, {
@@ -1016,10 +1061,10 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$d.render = render$d;
-script$d.__file = "src/components/dtrow/DtRow.vue";
+script$g.render = render$g;
+script$g.__file = "src/components/dtrow/DtRow.vue";
 
-var script$c = {
+var script$f = {
   name: "DtIcon",
   props: {
     iconStyle: {
@@ -1045,7 +1090,7 @@ var script$c = {
   },
 };
 
-function render$c(_ctx, _cache, $props, $setup, $data, $options) {
+function render$f(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("i", {
     class: vue.normalizeClass($setup.className)
   }, [
@@ -1053,10 +1098,123 @@ function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$c.render = render$c;
-script$c.__file = "src/components/dticon/DtIcon.vue";
+script$f.render = render$f;
+script$f.__file = "src/components/dticon/DtIcon.vue";
 
-var script$b = {
+var script$e = {
+  name: "DtListGroup",
+  props: {
+    flush: {
+      type: Boolean,
+      default: false,
+    },
+    horizontal: {
+      type: [Boolean, String],
+      default: false,
+    },
+    numbered: Boolean,
+    tag: {
+      type: String,
+      default: "ul",
+    },
+  },
+  setup(props) {
+    const className = vue.computed(() => {
+      return [
+        "list-group",
+        props.horizontal && horizontalClass.value,
+        props.flush && "list-group-flush",
+        props.numbered && "list-group-numbered",
+      ];
+    });
+
+    const horizontalClass = vue.computed(() => {
+      if (!props.horizontal) {
+        return;
+      }
+      return props.horizontal !== true
+        ? `list-group-horizontal-${props.horizontal}`
+        : "list-group-horizontal";
+    });
+
+    return {
+      className,
+      props,
+    };
+  },
+};
+
+function render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.className)
+  }, {
+    default: vue.withCtx(() => [
+      vue.renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
+script$e.render = render$e;
+script$e.__file = "src/components/dtlistgroup/DtListGroup.vue";
+
+var script$d = {
+  name: "DtListGroupItem",
+  props: {
+    tag: {
+      type: String,
+      default: "li",
+    },
+    active: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    action: {
+      type: Boolean,
+      default: false,
+    },
+    color: String,
+  },
+  setup(props) {
+    const className = vue.computed(() => {
+      return [
+        "list-group-item",
+        props.active && "active",
+        props.disabled && "disabled",
+        props.action && "list-group-item-action",
+        props.color && `list-group-item-${props.color}`,
+      ];
+    });
+
+    return {
+      className,
+      props,
+    };
+  },
+};
+
+function render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.className),
+    "aria-current": $props.active ? true : null,
+    "aria-disabled": $props.disabled ? true : null,
+    disabled: $props.disabled ? true : null
+  }, {
+    default: vue.withCtx(() => [
+      vue.renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class", "aria-current", "aria-disabled", "disabled"]))
+}
+
+script$d.render = render$d;
+script$d.__file = "src/components/dtlistgroupitem/DtListGroupItem.vue";
+
+var script$c = {
   name: "DtNavbar",
   props: {
     tag: {
@@ -1205,7 +1363,7 @@ var script$b = {
   },
 };
 
-function render$b(_ctx, _cache, $props, $setup, $data, $options) {
+function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.navClass),
     role: "navigation",
@@ -1228,10 +1386,10 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$b.render = render$b;
-script$b.__file = "src/components/dtnavbar/DtNavbar.vue";
+script$c.render = render$c;
+script$c.__file = "src/components/dtnavbar/DtNavbar.vue";
 
-var script$a = {
+var script$b = {
   name: "DtNavbarBrand",
   props: {
     tag: {
@@ -1251,7 +1409,7 @@ var script$a = {
   },
 };
 
-function render$a(_ctx, _cache, $props, $setup, $data, $options) {
+function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($setup.isLink), { class: "navbar-brand" }, {
     default: vue.withCtx(() => [
       vue.renderSlot(_ctx.$slots, "default")
@@ -1260,12 +1418,12 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
   }))
 }
 
-script$a.render = render$a;
-script$a.__file = "src/components/dtnavbarbrand/DtNavbarBrand.vue";
+script$b.render = render$b;
+script$b.__file = "src/components/dtnavbarbrand/DtNavbarBrand.vue";
 
-var script$9 = {
+var script$a = {
   name: "DtNavbarNav",
-  components: { dtCollapse: script$j },
+  components: { dtCollapse: script$n },
   props: {
     tag: {
       type: String,
@@ -1319,7 +1477,7 @@ var script$9 = {
   },
 };
 
-function render$9(_ctx, _cache, $props, $setup, $data, $options) {
+function render$a(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
     class: vue.normalizeClass($setup.className)
   }, {
@@ -1330,10 +1488,10 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$9.render = render$9;
-script$9.__file = "src/components/dtnavbarnav/DtNavbarNav.vue";
+script$a.render = render$a;
+script$a.__file = "src/components/dtnavbarnav/DtNavbarNav.vue";
 
-var script$8 = {
+var script$9 = {
   name: "DtNavbarItem",
   props: {
     tag: {
@@ -1393,9 +1551,9 @@ var script$8 = {
   },
 };
 
-const _hoisted_1$3 = ["href", "target"];
+const _hoisted_1$4 = ["href", "target"];
 
-function render$8(_ctx, _cache, $props, $setup, $data, $options) {
+function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_router_link = vue.resolveComponent("router-link");
 
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($setup.props.tag), {
@@ -1423,20 +1581,20 @@ function render$8(_ctx, _cache, $props, $setup, $data, $options) {
               target: $setup.tab
             }, [
               vue.renderSlot(_ctx.$slots, "default")
-            ], 10 /* CLASS, PROPS */, _hoisted_1$3))
+            ], 10 /* CLASS, PROPS */, _hoisted_1$4))
           : vue.renderSlot(_ctx.$slots, "default", { key: 2 })
     ]),
     _: 3 /* FORWARDED */
   }, 8 /* PROPS */, ["class"]))
 }
 
-script$8.render = render$8;
-script$8.__file = "src/components/dtnavbaritem/DtNavbarItem.vue";
+script$9.render = render$9;
+script$9.__file = "src/components/dtnavbaritem/DtNavbarItem.vue";
 
-var script$7 = {
+var script$8 = {
   name: "DtNavbarToggler",
   components: {
-    dtIcon: script$c,
+    dtIcon: script$f,
   },
   props: {
     tag: {
@@ -1483,7 +1641,7 @@ var script$7 = {
   },
 };
 
-function render$7(_ctx, _cache, $props, $setup, $data, $options) {
+function render$8(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_dt_icon = vue.resolveComponent("dt-icon");
 
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
@@ -1505,10 +1663,10 @@ function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["class", "aria-controls", "aria-expanded", "onClick"]))
 }
 
-script$7.render = render$7;
-script$7.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
+script$8.render = render$8;
+script$8.__file = "src/components/dtnavbartoggler/DtNavbarToggler.vue";
 
-var script$6 = {
+var script$7 = {
   name: "DtForm",
   props: {
     id: {
@@ -1541,9 +1699,9 @@ var script$6 = {
   },
 };
 
-const _hoisted_1$2 = ["id", "novalidate"];
+const _hoisted_1$3 = ["id", "novalidate"];
 
-function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("form", {
     id: $props.id,
     class: vue.normalizeClass($setup.className),
@@ -1551,11 +1709,11 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[0] || (_cache[0] = vue.withModifiers($event => (_ctx.$emit('submit', $event)), ["prevent"]))
   }, [
     vue.renderSlot(_ctx.$slots, "default")
-  ], 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1$2))
+  ], 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1$3))
 }
 
-script$6.render = render$6;
-script$6.__file = "src/components/dtform/DtForm.vue";
+script$7.render = render$7;
+script$7.__file = "src/components/dtform/DtForm.vue";
 
 function useId(id, suffix) {
   return vue.computed(() => id || getUID(suffix));
@@ -1728,7 +1886,7 @@ const allowedTypes = [
   "color",
 ];
 
-var script$5 = {
+var script$6 = {
   name: "DtFormInput",
   props: {
     ...COMMON_INPUT_PROPS,
@@ -1789,9 +1947,9 @@ var script$5 = {
   },
 };
 
-const _hoisted_1$1 = ["id", "name", "form", "type", "disabled", "placeholder", "required", "autocomplete", "readonly", "min", "max", "step", "list", "aria-required", "aria-invalid"];
+const _hoisted_1$2 = ["id", "name", "form", "type", "disabled", "placeholder", "required", "autocomplete", "readonly", "min", "max", "step", "list", "aria-required", "aria-invalid"];
 
-function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("input", vue.mergeProps({
     id: $setup.computedId,
     ref: "input",
@@ -1814,13 +1972,13 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     onInput: _cache[0] || (_cache[0] = $event => ($setup.onInput($event))),
     onChange: _cache[1] || (_cache[1] = $event => ($setup.onChange($event))),
     onBlur: _cache[2] || (_cache[2] = $event => ($setup.onBlur($event)))
-  }), null, 16 /* FULL_PROPS */, _hoisted_1$1))
+  }), null, 16 /* FULL_PROPS */, _hoisted_1$2))
 }
 
-script$5.render = render$5;
-script$5.__file = "src/components/dtforminput/DtFormInput.vue";
+script$6.render = render$6;
+script$6.__file = "src/components/dtforminput/DtFormInput.vue";
 
-var script$4 = {
+var script$5 = {
   name: "DtFormRow",
   props: {
     tag: {
@@ -1830,7 +1988,7 @@ var script$4 = {
   },
 };
 
-function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+function render$5(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), { class: "row d-flex flex-wrap" }, {
     default: vue.withCtx(() => [
       vue.renderSlot(_ctx.$slots, "default")
@@ -1839,10 +1997,10 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   }))
 }
 
-script$4.render = render$4;
-script$4.__file = "src/components/dtformrow/DtFormRow.vue";
+script$5.render = render$5;
+script$5.__file = "src/components/dtformrow/DtFormRow.vue";
 
-var script$3 = {
+var script$4 = {
   name: "DtFormText",
   props: {
     id: { type: String, required: false },
@@ -1867,7 +2025,7 @@ var script$3 = {
   },
 };
 
-function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), vue.mergeProps({ class: $setup.className }, $setup.attrs), {
     default: vue.withCtx(() => [
       vue.renderSlot(_ctx.$slots, "default")
@@ -1876,10 +2034,10 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   }, 16 /* FULL_PROPS */, ["class"]))
 }
 
-script$3.render = render$3;
-script$3.__file = "src/components/dtformtext/DtFormText.vue";
+script$4.render = render$4;
+script$4.__file = "src/components/dtformtext/DtFormText.vue";
 
-var script$2 = {
+var script$3 = {
   name: "DtFormValidFeedback",
   props: {
     ariaLive: { type: String, required: false },
@@ -1914,7 +2072,7 @@ var script$2 = {
   },
 };
 
-function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), vue.mergeProps({ class: $setup.classes }, $setup.attrs), {
     default: vue.withCtx(() => [
       vue.renderSlot(_ctx.$slots, "default")
@@ -1923,10 +2081,10 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   }, 16 /* FULL_PROPS */, ["class"]))
 }
 
-script$2.render = render$2;
-script$2.__file = "src/components/dtformvalidfeedback/DtFormValidFeedback.vue";
+script$3.render = render$3;
+script$3.__file = "src/components/dtformvalidfeedback/DtFormValidFeedback.vue";
 
-var script$1 = {
+var script$2 = {
   name: "DtFormInvalidFeedback",
   props: {
     ariaLive: { type: String, required: false },
@@ -1961,7 +2119,7 @@ var script$1 = {
   },
 };
 
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), vue.mergeProps({ class: $setup.classes }, $setup.attrs), {
     default: vue.withCtx(() => [
       vue.renderSlot(_ctx.$slots, "default")
@@ -1970,10 +2128,10 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   }, 16 /* FULL_PROPS */, ["class"]))
 }
 
-script$1.render = render$1;
-script$1.__file = "src/components/dtforminvalidfeedback/DtFormInvalidFeedback.vue";
+script$2.render = render$2;
+script$2.__file = "src/components/dtforminvalidfeedback/DtFormInvalidFeedback.vue";
 
-var script = {
+var script$1 = {
   name: "DtFormFloatingLabel",
   props: {
     label: { type: String },
@@ -1981,11 +2139,11 @@ var script = {
   },
 };
 
-const _hoisted_1 = { class: "form-floating" };
+const _hoisted_1$1 = { class: "form-floating" };
 const _hoisted_2 = ["for"];
 
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1, [
     vue.renderSlot(_ctx.$slots, "default"),
     vue.createElementVNode("label", {
       class: "ms-2",
@@ -1994,8 +2152,62 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
+script$1.render = render$1;
+script$1.__file = "src/components/dtformfloatinglabel/DtFormFloatingLabel.vue";
+
+var script = {
+  name: "DtSpinner",
+  props: {
+    tag: {
+      type: String,
+      default: "div",
+    },
+    grow: {
+      type: Boolean,
+      default: false,
+    },
+    color: String,
+    size: String,
+  },
+  setup(props) {
+    const className = vue.computed(() => {
+      return [
+        props.grow ? "spinner-grow" : "spinner-border",
+        props.color && `text-${props.color}`,
+        `${
+          props.size
+            ? props.grow
+              ? "spinner-grow-" + props.size
+              : "spinner-border-" + props.size
+            : ""
+        }`,
+      ];
+    });
+
+    return {
+      className,
+      props,
+    };
+  },
+};
+
+const _hoisted_1 = /*#__PURE__*/vue.createElementVNode("span", { class: "visually-hidden" }, "Loading...", -1 /* HOISTED */);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent($props.tag), {
+    class: vue.normalizeClass($setup.className),
+    role: "status"
+  }, {
+    default: vue.withCtx(() => [
+      _hoisted_1,
+      vue.renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3 /* FORWARDED */
+  }, 8 /* PROPS */, ["class"]))
+}
+
 script.render = render;
-script.__file = "src/components/dtformfloatinglabel/DtFormFloatingLabel.vue";
+script.__file = "src/components/dtspinner/DtSpinner.vue";
 
 function resolveTrigger(modifiers) {
   if (modifiers.manual) {
@@ -2072,51 +2284,55 @@ const DtTooltip = {
 var Directives = { DtTooltip };
 
 const navbarComponents = {
-  DtNavbar: script$b,
-  DtNavbarBrand: script$a,
-  DtNavbarNav: script$9,
-  DtNavbarItem: script$8,
-  DtNavbarToggler: script$7,
-  DtCollapse: script$j,
+  DtNavbar: script$c,
+  DtNavbarBrand: script$b,
+  DtNavbarNav: script$a,
+  DtNavbarItem: script$9,
+  DtNavbarToggler: script$8,
+  DtCollapse: script$n,
 };
 
 const accordionComponents = {
-  DtAccordion: script$k,
-  DtAccordionTab: script$i,
+  DtAccordion: script$o,
+  DtAccordionTab: script$m,
 };
 
 const formComponents = {
-  DtForm: script$6,
-  DtFormInput: script$5,
-  DtFormRow: script$4,
-  DtFormText: script$3,
-  DtFormInputValidFeedback: script$2,
-  DtFormInputInvalidFeedback: script$1,
-  DtFormFloatingLabel: script,
+  DtForm: script$7,
+  DtFormInput: script$6,
+  DtFormRow: script$5,
+  DtFormText: script$4,
+  DtFormInputValidFeedback: script$3,
+  DtFormInputInvalidFeedback: script$2,
+  DtFormFloatingLabel: script$1,
 };
 
 const components = [
+  script$k,
+  script$c,
   script$b,
   script$a,
   script$9,
   script$8,
-  script$7,
+  script$n,
+  script$o,
+  script$m,
+  script$l,
   script$j,
-  script$k,
   script$i,
   script$h,
-  script$g,
   script$f,
   script$e,
-  script$c,
+  script$d,
+  script$7,
   script$6,
   script$5,
   script$4,
   script$3,
   script$2,
   script$1,
+  script$g,
   script,
-  script$d,
 ];
 
 const FilterMatchMode = {
@@ -2320,29 +2536,33 @@ const DtFormPlugin = {
 const DebuggerVue = { install };
 
 exports.DebuggerVue = DebuggerVue;
-exports.DtAccordion = script$k;
+exports.DtAccordion = script$o;
 exports.DtAccordionPlugin = DtAccordionPlugin;
-exports.DtAccordionTab = script$i;
-exports.DtButton = script$h;
-exports.DtCard = script$g;
-exports.DtCollapse = script$j;
-exports.DtColumn = script$e;
-exports.DtContainer = script$f;
-exports.DtForm = script$6;
-exports.DtFormFloatingLabel = script;
-exports.DtFormInput = script$5;
-exports.DtFormInputInvalidFeedback = script$1;
-exports.DtFormInputValidFeedback = script$2;
+exports.DtAccordionTab = script$m;
+exports.DtBadge = script$k;
+exports.DtButton = script$l;
+exports.DtCard = script$j;
+exports.DtCollapse = script$n;
+exports.DtColumn = script$h;
+exports.DtContainer = script$i;
+exports.DtForm = script$7;
+exports.DtFormFloatingLabel = script$1;
+exports.DtFormInput = script$6;
+exports.DtFormInputInvalidFeedback = script$2;
+exports.DtFormInputValidFeedback = script$3;
 exports.DtFormPlugin = DtFormPlugin;
-exports.DtFormRow = script$4;
-exports.DtFormText = script$3;
-exports.DtIcon = script$c;
-exports.DtNavbar = script$b;
-exports.DtNavbarBrand = script$a;
-exports.DtNavbarItem = script$8;
-exports.DtNavbarNav = script$9;
+exports.DtFormRow = script$5;
+exports.DtFormText = script$4;
+exports.DtIcon = script$f;
+exports.DtListGroup = script$e;
+exports.DtListGroupItem = script$d;
+exports.DtNavbar = script$c;
+exports.DtNavbarBrand = script$b;
+exports.DtNavbarItem = script$9;
+exports.DtNavbarNav = script$a;
 exports.DtNavbarPlugin = DtNavbarPlugin;
-exports.DtNavbarToggler = script$7;
-exports.DtRow = script$d;
+exports.DtNavbarToggler = script$8;
+exports.DtRow = script$g;
+exports.DtSpinner = script;
 exports.install = install;
 exports.useDebuggerVue = useDebuggerVue;

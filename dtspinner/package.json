@@ -1,0 +1,9 @@
+{
+  "main": "./dtspinner.cjs.js",
+  "module": "./dtspinner.esm.js",
+  "unpkg": "./dtspinner.min.js",
+  "types": "./DtSpinner.d.ts",
+  "browser": {
+    "./sfc": "./DtSpinner.vue"
+  }
+}
