@@ -67,7 +67,7 @@ function useFormInput(props, emit) {
 
   const handleAutofocus = () => {
     nextTick(() => {
-      if (props.autofocus) input.value?.focus();
+      if (props.autofocus) input.value.focus();
     });
   };
 
@@ -136,12 +136,12 @@ function useFormInput(props, emit) {
   };
 
   const focus = () => {
-    if (!props.disabled) input.value?.focus();
+    if (!props.disabled) input.value.focus();
   };
 
   const blur = () => {
     if (!props.disabled) {
-      input.value?.blur();
+      input.value.blur();
     }
   };
 

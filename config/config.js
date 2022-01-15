@@ -1538,7 +1538,7 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
 
     const handleAutofocus = () => {
       vue.nextTick(() => {
-        if (props.autofocus) input.value?.focus();
+        if (props.autofocus) input.value.focus();
       });
     };
 
@@ -1607,12 +1607,12 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
     };
 
     const focus = () => {
-      if (!props.disabled) input.value?.focus();
+      if (!props.disabled) input.value.focus();
     };
 
     const blur = () => {
       if (!props.disabled) {
-        input.value?.blur();
+        input.value.blur();
       }
     };
 
@@ -1965,7 +1965,7 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
 
   const DtTooltip = {
     beforeMount(el, binding) {
-      el.setAttribute("data-bs-toogle", "tooltip");
+      el.setAttribute("data-bs-toggle", "tooltip");
 
       const isHtml = /<("[^"]*"|'[^']*'|[^'">])*>/.test(el.title);
       const trigger = resolveTrigger(binding.modifiers);
@@ -1982,14 +1982,14 @@ this.debuggervue.config = (function (exports, vue, bootstrap) {
 
       if (title !== "") {
         const instance = bootstrap.Tooltip.getInstance(el);
-        instance?.hide();
+        instance.hide();
         el.setAttribute("data-bs-original-title", title || "");
         el.setAttribute("title", "");
       }
     },
     unmounted(el) {
       const instance = bootstrap.Tooltip.getInstance(el);
-      instance?.dispose();
+      instance.dispose();
     },
   };
 

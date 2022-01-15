@@ -46,7 +46,7 @@ function resolvePlacement(modifiers) {
 
 const DtTooltip = {
   beforeMount(el, binding) {
-    el.setAttribute("data-bs-toogle", "tooltip");
+    el.setAttribute("data-bs-toggle", "tooltip");
 
     const isHtml = /<("[^"]*"|'[^']*'|[^'">])*>/.test(el.title);
     const trigger = resolveTrigger(binding.modifiers);
@@ -63,14 +63,14 @@ const DtTooltip = {
 
     if (title !== "") {
       const instance = bootstrap.Tooltip.getInstance(el);
-      instance?.hide();
+      instance.hide();
       el.setAttribute("data-bs-original-title", title || "");
       el.setAttribute("title", "");
     }
   },
   unmounted(el) {
     const instance = bootstrap.Tooltip.getInstance(el);
-    instance?.dispose();
+    instance.dispose();
   },
 };
 

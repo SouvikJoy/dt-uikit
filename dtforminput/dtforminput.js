@@ -69,7 +69,7 @@ this.debuggervue.dtforminput = (function (vue) {
 
     const handleAutofocus = () => {
       vue.nextTick(() => {
-        if (props.autofocus) input.value?.focus();
+        if (props.autofocus) input.value.focus();
       });
     };
 
@@ -138,12 +138,12 @@ this.debuggervue.dtforminput = (function (vue) {
     };
 
     const focus = () => {
-      if (!props.disabled) input.value?.focus();
+      if (!props.disabled) input.value.focus();
     };
 
     const blur = () => {
       if (!props.disabled) {
-        input.value?.blur();
+        input.value.blur();
       }
     };
 
